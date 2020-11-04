@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>76433828360-ea0nva2tob6cgr7mub2vbf7p5cjds1jo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.76433828360-ea0nva2tob6cgr7mub2vbf7p5cjds1jo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBSznx1i906KAMVQp4pNeOLBKlXJMznivo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>76433828360</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cbmt.c-bilingua</string>
+	<key>PROJECT_ID</key>
+	<string>colegio-bilingue-3e443</string>
+	<key>STORAGE_BUCKET</key>
+	<string>colegio-bilingue-3e443.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:76433828360:ios:e705ad396f986973d57fbd</string>
+	<key>DATABASE_URL</key>
+	<string>https://colegio-bilingue-3e443.firebaseio.com</string>
+</dict>
+</plist>
