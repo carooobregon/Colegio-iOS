@@ -5,7 +5,6 @@
 //  Created by Caro Obregon on 18/10/20.
 //  Copyright © 2020 carooobregon. All rights reserved.
 //
-
 import UIKit
 
 class MateriaViewCell: UITableViewCell {
@@ -18,6 +17,17 @@ class MateriaViewCell: UITableViewCell {
     
 }
 
+class FakeCalificacion: NSObject {
+    let materia : String
+    var nota : [Int] = []
+    
+    init(materia: String, nota: [Int]) {
+        self.materia = materia
+        self.nota.append(contentsOf: nota)
+    }
+    
+}
+
 class CalificacionesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // TODO: agregar back buttons y arreglar promedio general
@@ -27,24 +37,23 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var nombreAlumno: UILabel!
     @IBOutlet weak var grado: UILabel!
     @IBOutlet weak var maestra: UILabel!
-    
-    let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"];
-
+    let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"]
+    let boleta = [FakeCalificacion(materia: "Matematicas", nota: [100,94,98]),FakeCalificacion(materia: "Matematicas", nota: [100,94,98]), FakeCalificacion(materia: "Matematicas", nota: [100,94,98])]
     override func viewDidLoad() {
         super.viewDidLoad()
-        nombreAlumno.text = currAlumno?.nombre
+        nombreAlumno.text = currAlumno?.fName
         grado.text = buildGrade()
         maestra.text = buildMaestra()
         promedioAlumno.text = String(93)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (currAlumno?.boleta.count)!
+        return boleta.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! MateriaViewCell
-        let currBoleta = currAlumno?.boleta as! [Calificacion]
+        let currBoleta = boleta
 
         celda.materia.text = currBoleta[indexPath.row].materia
         celda.califAgo.text = String(currBoleta[indexPath.row].nota[0])
@@ -65,7 +74,7 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func buildMaestra() -> String{
-        return "Maestra: " + currAlumno!.maestra
+        return "Maestra: " + "Alicia Martinez"
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -92,7 +101,6 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.

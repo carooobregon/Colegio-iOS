@@ -5,7 +5,6 @@
 //  Created by Gaby Corona on 11/4/20.
 //  Copyright © 2020 cbmt. All rights reserved.
 //
-
 import Foundation
 import UIKit
 
@@ -23,4 +22,3 @@ class Alumno: Codable {
     
    
 }
-

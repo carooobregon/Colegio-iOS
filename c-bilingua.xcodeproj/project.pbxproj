@@ -35,16 +35,16 @@
 		0F1A804925524EC700CE25C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A804725524EC700CE25C3 /* LaunchScreen.storyboard */; };
 		0F1A805125524F6600CE25C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A805025524F6600CE25C3 /* GoogleService-Info.plist */; };
 		0F230D7825526D340069F77F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F230D7525526D340069F77F /* Main.storyboard */; };
-		0F230D7F25526DA80069F77F /* CalificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F230D7925526DA80069F77F /* CalificacionesViewController.swift */; };
-		0F230D8025526DA80069F77F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F230D7A25526DA80069F77F /* MenuViewController.swift */; };
-		0F230D8125526DA80069F77F /* IntroCalificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F230D7B25526DA80069F77F /* IntroCalificacionesViewController.swift */; };
-		0F230D8225526DA80069F77F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F230D7C25526DA80069F77F /* ViewController.swift */; };
-		0F230D8325526DA80069F77F /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F230D7D25526DA80069F77F /* Alumno.swift */; };
-		0F230D8425526DA80069F77F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F230D7E25526DA80069F77F /* RoundedImageView.swift */; };
-		0F9C9D60255466F10073CAA2 /* Calificacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D5F255466F10073CAA2 /* Calificacion.swift */; };
+		0F230D7F25526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0F230D8025526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0F230D8125526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0F230D8225526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0F230D8325526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0F9C9D6225546CE30073CAA2 /* AvisosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */; };
 		0F9C9D6425546EE30073CAA2 /* Aviso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D6325546EE30073CAA2 /* Aviso.swift */; };
 		0F9C9D662554749D0073CAA2 /* AvisoCompletoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */; };
+		0FE28B9C25548BFA006DF48E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0FE28B9F25548CAC006DF48E /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,13 +77,6 @@
 		0F1A804A25524EC700CE25C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F1A805025524F6600CE25C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F230D7625526D340069F77F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0F230D7925526DA80069F77F /* CalificacionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalificacionesViewController.swift; path = ../../../../Downloads/CBMT/CBMT/CalificacionesViewController.swift; sourceTree = "<group>"; };
-		0F230D7A25526DA80069F77F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../../../../Downloads/CBMT/CBMT/MenuViewController.swift; sourceTree = "<group>"; };
-		0F230D7B25526DA80069F77F /* IntroCalificacionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroCalificacionesViewController.swift; path = ../../../../Downloads/CBMT/CBMT/IntroCalificacionesViewController.swift; sourceTree = "<group>"; };
-		0F230D7C25526DA80069F77F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../Downloads/CBMT/CBMT/ViewController.swift; sourceTree = "<group>"; };
-		0F230D7D25526DA80069F77F /* Alumno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alumno.swift; path = ../../../../Downloads/CBMT/CBMT/Alumno.swift; sourceTree = "<group>"; };
-		0F230D7E25526DA80069F77F /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedImageView.swift; path = ../../../../Downloads/CBMT/CBMT/RoundedImageView.swift; sourceTree = "<group>"; };
-		0F9C9D5F255466F10073CAA2 /* Calificacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calificacion.swift; sourceTree = "<group>"; };
 		0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisosViewController.swift; sourceTree = "<group>"; };
 		0F9C9D6325546EE30073CAA2 /* Aviso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aviso.swift; sourceTree = "<group>"; };
 		0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisoCompletoViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +146,7 @@
 				0F1A803A25524EC500CE25C3 /* Products */,
 				A7143E059ECA8AF5B10C7859 /* Pods */,
 				3A1CCAC3C6AF3F5ECF6849C1 /* Frameworks */,
+				0FE28B9A25548BCB006DF48E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,14 +174,15 @@
 				0F1A804725524EC700CE25C3 /* LaunchScreen.storyboard */,
 				0F1A805025524F6600CE25C3 /* GoogleService-Info.plist */,
 				0F1A804A25524EC700CE25C3 /* Info.plist */,
-				0F230D7D25526DA80069F77F /* Alumno.swift */,
-				0F230D7925526DA80069F77F /* CalificacionesViewController.swift */,
-				0F9C9D5F255466F10073CAA2 /* Calificacion.swift */,
-				0F230D7B25526DA80069F77F /* IntroCalificacionesViewController.swift */,
-				0F230D7A25526DA80069F77F /* MenuViewController.swift */,
-				0F230D7C25526DA80069F77F /* ViewController.swift */,
 			);
 			path = "c-bilingua";
+			sourceTree = "<group>";
+		};
+		0FE28B9A25548BCB006DF48E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		3A1CCAC3C6AF3F5ECF6849C1 /* Frameworks */ = {
@@ -329,16 +324,17 @@
 				0B7CE65825533076008D20B2 /* ViewController.swift in Sources */,
 				0B7157052553A7B100D88231 /* Alumno.swift in Sources */,
 				0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */,
+				0FE28B9F25548CAC006DF48E /* (null) in Sources */,
 				0B71571A2553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift in Sources */,
 				0B7CE64C25533058008D20B2 /* CalificacionesViewController.swift in Sources */,
 				0B7CE67025533319008D20B2 /* EstadoDeCuenta.swift in Sources */,
 				0B7CE64825533042008D20B2 /* IntroCalificacionesViewController.swift in Sources */,
-				0F230D8025526DA80069F77F /* MenuViewController.swift in Sources */,
-				0F230D8125526DA80069F77F /* IntroCalificacionesViewController.swift in Sources */,
-				0F230D8325526DA80069F77F /* Alumno.swift in Sources */,
-				0F230D7F25526DA80069F77F /* CalificacionesViewController.swift in Sources */,
+				0F230D8025526DA80069F77F /* (null) in Sources */,
+				0F230D8125526DA80069F77F /* (null) in Sources */,
+				0F230D8325526DA80069F77F /* (null) in Sources */,
+				0F230D7F25526DA80069F77F /* (null) in Sources */,
 				0F9C9D6425546EE30073CAA2 /* Aviso.swift in Sources */,
-				0F230D8225526DA80069F77F /* ViewController.swift in Sources */,
+				0F230D8225526DA80069F77F /* (null) in Sources */,
 				0F1A803D25524EC500CE25C3 /* AppDelegate.swift in Sources */,
 				0B71571E2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift in Sources */,
 				0B7157132553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift in Sources */,
@@ -349,13 +345,12 @@
 				0B7CE66F25533319008D20B2 /* Calificacion.swift in Sources */,
 				0B7CE65325533069008D20B2 /* RoundedImageView.swift in Sources */,
 				0B7CE67625533319008D20B2 /* Usuario.swift in Sources */,
+				0FE28B9C25548BFA006DF48E /* (null) in Sources */,
 				0B7CE65D255332E5008D20B2 /* DatabaseManager.swift in Sources */,
 				0B7CE67325533319008D20B2 /* Eventos.swift in Sources */,
 				0B7CE67425533319008D20B2 /* Materias.swift in Sources */,
 				0F9C9D662554749D0073CAA2 /* AvisoCompletoViewController.swift in Sources */,
 				0F9C9D6225546CE30073CAA2 /* AvisosViewController.swift in Sources */,
-				0F230D8425526DA80069F77F /* RoundedImageView.swift in Sources */,
-				0F9C9D60255466F10073CAA2 /* Calificacion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
