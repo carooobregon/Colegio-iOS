@@ -39,6 +39,10 @@ class AvisosViewController: UIViewController, UITableViewDataSource, UITableView
         return celda
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120.0
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("TAP")
         self.performSegue(withIdentifier: "showAviso", sender: indexPath)
@@ -47,10 +51,8 @@ class AvisosViewController: UIViewController, UITableViewDataSource, UITableView
     
     // MARK: - Navigation
     func prepare(for segue: UIStoryboardSegue, sender: IndexPath) {
-        if (segue.identifier == "showAviso"){
-            let vistaDetalle  = segue.destination as! AvisoViewController
-            vistaDetalle.currAviso = listaAvisos[sender.row]
-        }
+        let vistaDetalle  = segue.destination as! AvisoViewController
+        vistaDetalle.currAviso = listaAvisos[sender.row]
     }
     
 

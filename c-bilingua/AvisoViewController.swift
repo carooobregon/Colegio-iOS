@@ -10,11 +10,14 @@ import UIKit
 
 class AvisoViewController: UIViewController {
 
+    @IBOutlet weak var lblTitulo: UILabel!
+    @IBOutlet weak var lblDetalle: UILabel!
     var currAviso : Aviso?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        lblTitulo.text = currAviso?.titulo
+        lblDetalle.text = currAviso?.detalle
     }
     
 
