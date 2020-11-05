@@ -18,11 +18,11 @@ class AlCalificacionesViewCell: UITableViewCell {
 
 class IntroCalificacionesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var listaAlumnos = [
-        Alumno(nombre: "Gaby Corona"),
-        Alumno(nombre: "Caro Obregon"),
-        Alumno(nombre: "Lucia Cantu")
-    ]
+    var listaAlumnos = [Alumno]()
+//        Alumno(fName: "Gaby Corona"),
+//        Alumno(nombre: "Caro Obregon"),
+//        Alumno(nombre: "Lucia Cantu")
+    //]
     
     let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"];
     let colors = UIColor.systemRed
@@ -38,12 +38,12 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! AlCalificacionesViewCell
-        if(listaAlumnos[indexPath.row].genero){
-            celda.imagen.image = UIImage(named: "girlpng")
-        }
-        celda.alNombre.text = listaAlumnos[indexPath.row].nombre
-        celda.alGrado.text = String(listaAlumnos[indexPath.row].grado) + "° de "  + listaAlumnos[indexPath.row].nivel
-        celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
+       // if(listaAlumnos[indexPath.row]){
+       //     celda.imagen.image = UIImage(named: "girlpng")
+       // }
+       // celda.alNombre.text = listaAlumnos[indexPath.row]
+        //celda.alGrado.text = String(listaAlumnos[indexPath.row]) + "° de "  + listaAlumnos[indexPath.row]
+        //celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
         celda.contentView.backgroundColor = hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
@@ -87,7 +87,7 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     func prepare(for segue: UIStoryboardSegue, sender: IndexPath) {
         if (segue.identifier == "showCalif"){
             let vistaDetalle  = segue.destination as! CalificacionesViewController
-            vistaDetalle.currAlumno = listaAlumnos[sender.row]
+            //vistaDetalle.currAlumno = listaAlumnos[sender.row]
         }
     }
 
