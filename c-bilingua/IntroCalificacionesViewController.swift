@@ -18,6 +18,7 @@ class AlCalificacionesViewCell: UITableViewCell {
 
 class IntroCalificacionesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     var listaAlumnos = [
         Alumno(nombre: "Gaby Corona"),
         Alumno(nombre: "Caro Obregon"),
@@ -25,7 +26,8 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     ]
     
     let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"];
-    let colors = UIColor.systemRed
+    var selectedIndexPath: NSIndexPath = NSIndexPath()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -79,17 +81,23 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("TAP")
-        self.performSegue(withIdentifier: "showCalif", sender: indexPath)
+        self.performSegue(withIdentifier: "showCalif", sender: self)
     }
     
     // MARK: - Navigation
-    func prepare(for segue: UIStoryboardSegue, sender: IndexPath) {
-        if (segue.identifier == "showCalif"){
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if ("showCalif" == segue.identifier){
+            let indexPath = tableView.indexPathForSelectedRow
             let vistaDetalle  = segue.destination as! CalificacionesViewController
-            vistaDetalle.currAlumno = listaAlumnos[sender.row]
+            vistaDetalle.currAlumno = listaAlumnos[indexPath!.row]
         }
     }
+    
+//    func performSegue(withIdentifier identifier: String, sender: IndexPath) {
+//        let vistaDetalle  = segue.destination as! CalificacionesViewController
+//        vistaDetalle.currAlumno = listaAlumnos[sender.row]
+//    }
 
 
 }
