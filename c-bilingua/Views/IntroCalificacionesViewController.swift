@@ -17,20 +17,36 @@ class AlCalificacionesViewCell: UITableViewCell {
 }
 
 class IntroCalificacionesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    //DatabaseManager.shared.getAlumnos("dDG9eowRcs7KSNP3GaRh")
     
+   
+    
+    var listaAlumnos = [Alumno]()
+//        Alumno(fName: "Gaby Corona"),
+//        Alumno(nombre: "Caro Obregon"),
+//        Alumno(nombre: "Lucia Cantu")
+    //]
     @IBOutlet weak var tableView: UITableView!
-    var listaAlumnos = [
-        Alumno(nombre: "Gaby Corona"),
-        Alumno(nombre: "Caro Obregon"),
-        Alumno(nombre: "Lucia Cantu")
-    ]
     
     let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"];
     var selectedIndexPath: NSIndexPath = NSIndexPath()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       getInfo()
         // Do any additional setup after loading the view.
+    }
+    func getInfo(){
+        DatabaseManager.shared.getAlumnos{ (alumnos) in
+            for i in alumnos{
+                self.listaAlumnos.append(i)
+                
+            }
+        }
+        for i in listaAlumnos{
+            print(i.fName)
+            print("hola")
+        }
     }
 
 //    MARK: - Metodos de protocolo Table View
@@ -43,9 +59,9 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
         if(listaAlumnos[indexPath.row].genero){
             celda.imagen.image = UIImage(named: "girlpng")
         }
-        celda.alNombre.text = listaAlumnos[indexPath.row].nombre
-        celda.alGrado.text = String(listaAlumnos[indexPath.row].grado) + "° de "  + listaAlumnos[indexPath.row].nivel
-        celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
+        celda.alNombre.text = listaAlumnos[indexPath.row].fName
+        celda.alGrado.text = String(listaAlumnos[indexPath.row].grado) + "° de " + listaAlumnos[indexPath.row].nivel
+        //celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
         celda.contentView.backgroundColor = hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
