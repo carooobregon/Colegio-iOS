@@ -15,6 +15,7 @@ class Alumno: NSObject {
     var nivel : String
     var maestra : String
     var genero : Bool
+    var boleta : [Calificacion] = []
     
     init(nombre: String){
         self.nombre = nombre
@@ -22,6 +23,6 @@ class Alumno: NSObject {
         self.nivel = "Primaria"
         self.maestra = "Yolanda Martinez"
         self.genero = true
+        self.boleta.append(contentsOf: [Calificacion(materia: "Matematicas", nota: [100,93,90]), Calificacion(materia: "Arte", nota: [98,92,90]), Calificacion(materia: "Computacion", nota: [94,92,100])])
     }
-    
 }
