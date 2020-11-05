@@ -83,6 +83,7 @@
 		11FEB83C2347B74450398B3A /* Pods_c_bilingua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_c_bilingua.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD6286ECADB1CBEFBB6B997 /* Pods-c-bilingua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c-bilingua.release.xcconfig"; path = "Target Support Files/Pods-c-bilingua/Pods-c-bilingua.release.xcconfig"; sourceTree = "<group>"; };
 		A65D78D39C3FF466440177B7 /* Pods-c-bilingua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c-bilingua.debug.xcconfig"; path = "Target Support Files/Pods-c-bilingua/Pods-c-bilingua.debug.xcconfig"; sourceTree = "<group>"; };
+		C259EEFE255483660003466B /* EstadoCuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoCuentaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +168,7 @@
 				0B71570B2553A95C00D88231 /* Views */,
 				0F1A803E25524EC500CE25C3 /* SceneDelegate.swift */,
 				0F230D7525526D340069F77F /* Main.storyboard */,
+				C259EEFE255483660003466B /* EstadoCuentaViewController.swift */,
 				0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */,
 				0F9C9D6325546EE30073CAA2 /* Aviso.swift */,
 				0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */,
@@ -342,6 +344,7 @@
 				0B7CE67525533319008D20B2 /* CuotaPendiente.swift in Sources */,
 				0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */,
 				0F1A803F25524EC500CE25C3 /* SceneDelegate.swift in Sources */,
+				C259EEFF255483660003466B /* EstadoCuentaViewController.swift in Sources */,
 				0B7CE66F25533319008D20B2 /* Calificacion.swift in Sources */,
 				0B7CE65325533069008D20B2 /* RoundedImageView.swift in Sources */,
 				0B7CE67625533319008D20B2 /* Usuario.swift in Sources */,
