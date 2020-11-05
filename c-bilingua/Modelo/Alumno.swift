@@ -1,42 +1,26 @@
 //
 //  Alumno.swift
-//  CBMT
+//  c-bilingua
 //
-//  Created by Caro Obregon on 18/10/20.
-//  Copyright © 2020 carooobregon. All rights reserved.
+//  Created by Gaby Corona on 11/4/20.
+//  Copyright © 2020 cbmt. All rights reserved.
 //
 
+import Foundation
 import UIKit
-//import Calificacion
-//import Materias
 
-class Alumno: NSObject {
-    var id : Int = 0
-//    var grado : Int = 0
-//    var fName: String = ""
-//    var lName: String = ""
-//    var nivel: String = ""
-//    var maestra: String = ""
-//    var email: String = ""
-//    var genero:Bool = false
-//
-//    var dob : NSDate
-     override init( ){
-        self.id = 1
-    }
+class Alumno: Codable {
+    var id: String = ""
+    var fName : String = ""
+    var lName : String  = ""
+    var email : String = ""
+    var grado : Int = 0
+    var genero : Bool = false
+    var nivel : String = ""
+    //var dob : NSDate
     
     
-//    init(nombre: String){
-//        self.id = 1
-//        self.fName = "Gabriela"
-//        self.lName = "Corona Garza"
-//        self.grado = 3
-//        self.nivel = "Primaria"
-//        self.maestra = "Yolanda Martinez"
-//        self.email = "gabriela.corona03@gmail.com"
-//        self.genero = true
-//    }
-//    func obtenerPromedio( calificaciones: Calificacion){
-//        print("Obteniendo Promedio")
-//    }
+    
+   
 }
+

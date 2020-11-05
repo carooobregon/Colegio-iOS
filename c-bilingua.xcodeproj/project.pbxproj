@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		09D2CB60B107EFFDCF04ACF4 /* Pods_c_bilingua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FEB83C2347B74450398B3A /* Pods_c_bilingua.framework */; };
+		0B2E571E2553CEA60051C732 /* TableViewControllerGetUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */; };
+		0B7157052553A7B100D88231 /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157042553A7B100D88231 /* Alumno.swift */; };
+		0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */; };
+		0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */; };
+		0B7157132553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157122553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift */; };
+		0B71571A2553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157192553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift */; };
+		0B71571E2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71571D2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift */; };
 		0B7CE64825533042008D20B2 /* IntroCalificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE64725533042008D20B2 /* IntroCalificacionesViewController.swift */; };
 		0B7CE64C25533058008D20B2 /* CalificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE64B25533057008D20B2 /* CalificacionesViewController.swift */; };
 		0B7CE65325533069008D20B2 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE65225533069008D20B2 /* RoundedImageView.swift */; };
@@ -18,7 +25,6 @@
 		0B7CE66F25533319008D20B2 /* Calificacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE66625533318008D20B2 /* Calificacion.swift */; };
 		0B7CE67025533319008D20B2 /* EstadoDeCuenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE66725533318008D20B2 /* EstadoDeCuenta.swift */; };
 		0B7CE67125533319008D20B2 /* Avisos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE66825533318008D20B2 /* Avisos.swift */; };
-		0B7CE67225533319008D20B2 /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE66925533318008D20B2 /* Alumno.swift */; };
 		0B7CE67325533319008D20B2 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE66A25533318008D20B2 /* Eventos.swift */; };
 		0B7CE67425533319008D20B2 /* Materias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE66B25533318008D20B2 /* Materias.swift */; };
 		0B7CE67525533319008D20B2 /* CuotaPendiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE66C25533319008D20B2 /* CuotaPendiente.swift */; };
@@ -32,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerGetUsers.swift; sourceTree = "<group>"; };
+		0B7157042553A7B100D88231 /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
+		0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdmin.swift; sourceTree = "<group>"; };
+		0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddUser.swift; sourceTree = "<group>"; };
+		0B7157122553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddAlumnosAUser.swift; sourceTree = "<group>"; };
+		0B7157192553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddCalificacionesAMateria.swift; sourceTree = "<group>"; };
+		0B71571D2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddMateriaAAlumno.swift; sourceTree = "<group>"; };
 		0B7CE64725533042008D20B2 /* IntroCalificacionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCalificacionesViewController.swift; sourceTree = "<group>"; };
 		0B7CE64B25533057008D20B2 /* CalificacionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalificacionesViewController.swift; sourceTree = "<group>"; };
 		0B7CE65225533069008D20B2 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
@@ -42,7 +55,6 @@
 		0B7CE66625533318008D20B2 /* Calificacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calificacion.swift; sourceTree = "<group>"; };
 		0B7CE66725533318008D20B2 /* EstadoDeCuenta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadoDeCuenta.swift; sourceTree = "<group>"; };
 		0B7CE66825533318008D20B2 /* Avisos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avisos.swift; sourceTree = "<group>"; };
-		0B7CE66925533318008D20B2 /* Alumno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
 		0B7CE66A25533318008D20B2 /* Eventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
 		0B7CE66B25533318008D20B2 /* Materias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Materias.swift; sourceTree = "<group>"; };
 		0B7CE66C25533319008D20B2 /* CuotaPendiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuotaPendiente.swift; sourceTree = "<group>"; };
@@ -72,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B71570B2553A95C00D88231 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */,
+				0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */,
+				0B71571D2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift */,
+				0B7CE65725533076008D20B2 /* MenuViewController.swift */,
+				0B7CE64B25533057008D20B2 /* CalificacionesViewController.swift */,
+				0B7157192553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift */,
+				0B7CE64725533042008D20B2 /* IntroCalificacionesViewController.swift */,
+				0B7CE65625533076008D20B2 /* ViewController.swift */,
+				0B7CE65225533069008D20B2 /* RoundedImageView.swift */,
+				0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */,
+				0B7157122553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0B7CE65B255332D6008D20B2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +113,7 @@
 		0B7CE6642553330A008D20B2 /* Modelo */ = {
 			isa = PBXGroup;
 			children = (
-				0B7CE66925533318008D20B2 /* Alumno.swift */,
+				0B7157042553A7B100D88231 /* Alumno.swift */,
 				0B7CE66825533318008D20B2 /* Avisos.swift */,
 				0B7CE66625533318008D20B2 /* Calificacion.swift */,
 				0B7CE66525533318008D20B2 /* CuotaPagada.swift */,
@@ -120,17 +150,13 @@
 				0B7CE6642553330A008D20B2 /* Modelo */,
 				0B7CE65B255332D6008D20B2 /* Helpers */,
 				0F1A803C25524EC500CE25C3 /* AppDelegate.swift */,
+				0B71570B2553A95C00D88231 /* Views */,
 				0F1A803E25524EC500CE25C3 /* SceneDelegate.swift */,
-				0B7CE65225533069008D20B2 /* RoundedImageView.swift */,
 				0F230D7525526D340069F77F /* Main.storyboard */,
 				0F1A804525524EC700CE25C3 /* Assets.xcassets */,
 				0F1A804725524EC700CE25C3 /* LaunchScreen.storyboard */,
 				0F1A805025524F6600CE25C3 /* GoogleService-Info.plist */,
 				0F1A804A25524EC700CE25C3 /* Info.plist */,
-				0B7CE64B25533057008D20B2 /* CalificacionesViewController.swift */,
-				0B7CE64725533042008D20B2 /* IntroCalificacionesViewController.swift */,
-				0B7CE65725533076008D20B2 /* MenuViewController.swift */,
-				0B7CE65625533076008D20B2 /* ViewController.swift */,
 			);
 			path = "c-bilingua";
 			sourceTree = "<group>";
@@ -270,14 +296,20 @@
 			files = (
 				0B7CE65925533076008D20B2 /* MenuViewController.swift in Sources */,
 				0B7CE67125533319008D20B2 /* Avisos.swift in Sources */,
+				0B2E571E2553CEA60051C732 /* TableViewControllerGetUsers.swift in Sources */,
 				0B7CE65825533076008D20B2 /* ViewController.swift in Sources */,
+				0B7157052553A7B100D88231 /* Alumno.swift in Sources */,
+				0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */,
+				0B71571A2553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift in Sources */,
 				0B7CE64C25533058008D20B2 /* CalificacionesViewController.swift in Sources */,
 				0B7CE67025533319008D20B2 /* EstadoDeCuenta.swift in Sources */,
 				0B7CE64825533042008D20B2 /* IntroCalificacionesViewController.swift in Sources */,
-				0B7CE67225533319008D20B2 /* Alumno.swift in Sources */,
 				0F1A803D25524EC500CE25C3 /* AppDelegate.swift in Sources */,
+				0B71571E2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift in Sources */,
+				0B7157132553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift in Sources */,
 				0B7CE66E25533319008D20B2 /* CuotaPagada.swift in Sources */,
 				0B7CE67525533319008D20B2 /* CuotaPendiente.swift in Sources */,
+				0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */,
 				0F1A803F25524EC500CE25C3 /* SceneDelegate.swift in Sources */,
 				0B7CE66F25533319008D20B2 /* Calificacion.swift in Sources */,
 				0B7CE65325533069008D20B2 /* RoundedImageView.swift in Sources */,

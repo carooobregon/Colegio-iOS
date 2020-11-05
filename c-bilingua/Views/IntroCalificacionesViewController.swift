@@ -17,6 +17,9 @@ class AlCalificacionesViewCell: UITableViewCell {
 }
 
 class IntroCalificacionesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    //DatabaseManager.shared.getAlumnos("dDG9eowRcs7KSNP3GaRh")
+    
+   
     
     var listaAlumnos = [Alumno]()
 //        Alumno(fName: "Gaby Corona"),
@@ -28,7 +31,20 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     let colors = UIColor.systemRed
     override func viewDidLoad() {
         super.viewDidLoad()
+       getInfo()
         // Do any additional setup after loading the view.
+    }
+    func getInfo(){
+        DatabaseManager.shared.getAlumnos{ (alumnos) in
+            for i in alumnos{
+                self.listaAlumnos.append(i)
+                
+            }
+        }
+        for i in listaAlumnos{
+            print(i.fName)
+            print("hola")
+        }
     }
 
 //    MARK: - Metodos de protocolo Table View
@@ -38,11 +54,11 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! AlCalificacionesViewCell
-       // if(listaAlumnos[indexPath.row]){
-       //     celda.imagen.image = UIImage(named: "girlpng")
-       // }
-       // celda.alNombre.text = listaAlumnos[indexPath.row]
-        //celda.alGrado.text = String(listaAlumnos[indexPath.row]) + "° de "  + listaAlumnos[indexPath.row]
+        if(listaAlumnos[indexPath.row].genero){
+            celda.imagen.image = UIImage(named: "girlpng")
+        }
+        celda.alNombre.text = listaAlumnos[indexPath.row].fName
+        celda.alGrado.text = String(listaAlumnos[indexPath.row].grado) + "° de " + listaAlumnos[indexPath.row].nivel
         //celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
         celda.contentView.backgroundColor = hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
@@ -87,7 +103,7 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     func prepare(for segue: UIStoryboardSegue, sender: IndexPath) {
         if (segue.identifier == "showCalif"){
             let vistaDetalle  = segue.destination as! CalificacionesViewController
-            //vistaDetalle.currAlumno = listaAlumnos[sender.row]
+            vistaDetalle.currAlumno = listaAlumnos[sender.row]
         }
     }
 

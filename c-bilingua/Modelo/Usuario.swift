@@ -10,7 +10,7 @@ import UIKit
 
 
 class Usuario: Codable {
-
+    var id: String = ""
     var fName : String = ""
     var lName : String  = ""
     var email : String = ""
@@ -20,32 +20,6 @@ class Usuario: Codable {
     
     var telefono : String = ""
     var direccion : String  = ""
+    //var alumno : Alumno
     
-    
-    
-    
-   
-//    init(){
-//        self.id = 1
-//        self.fName = "Gabriela"
-//        self.lName = "Corona Garza"
-//        self.email = "gabriela.corona03@gmail.com"
-//        self.isAdmin = true
-//        self.isMaestro = false
-//        self.isPadre = false
-//        self.telefono = "81-1013-4528"
-//        self.direccion = " Avenida Santa maria #116  los rodriguez santiago "
-//    }
-//
-//    func crearUsuario(fName: String, lName: String, email: String, isAdmin: Bool, isMaestro: Bool,  isPadre: Bool, telefono: String, direccion: String){
-//        print("creating user")
-//    }
-//
-//    func editarUsuario(id:Int, isAdmin:Bool){
-//        print("Editando Usuario")
-//    }
-//
-//    func borrarUsuario(id:Int, isAdmin:Bool){
-//        print("borrando usuario")
-//    }
 }

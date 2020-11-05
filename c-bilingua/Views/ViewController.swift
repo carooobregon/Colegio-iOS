@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tfUser: UITextField!
-    @IBOutlet weak var tfPassword: UITextField!
+
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DatabaseManager.shared.getAlumnos()
+        //DatabaseManager.shared.getAlumnos()
         //DatabaseManager.shared.deleteUser(id: "cXcPjoVbcb2rrJWXvLVM")
         //DatabaseManager.shared.editUser(id: "dDG9eowRcs7KSNP3GaRh", fName: "gabriela")
         
@@ -27,7 +29,7 @@ class ViewController: UIViewController {
         
         DatabaseManager.shared.getUsuarios{ (usuarios) in
             for i in usuarios{
-                print(i.fName)
+                print(i.id)
                 
             }
             
@@ -35,8 +37,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func btnLogIn(_ sender: UIButton) {
-    }
-    
+
 }
 

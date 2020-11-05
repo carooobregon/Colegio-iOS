@@ -27,17 +27,19 @@ class DatabaseManager{
                 
                 for document in snapshot?.documents ?? []{
                     var dict = document.data()
+                    dict["id"] = document.documentID
                     guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
                     let usuario = try? self.decoder.decode(Usuario.self, from: data)
                     usuarios.append(usuario ?? Usuario())
                     
+                    
+                    //print(dict)
+                    
                 }
-                print(usuarios.count)
                 completion(usuarios)
                 
             }
             else{
-                print("hola")
                 completion([])
             }
         }
@@ -57,7 +59,7 @@ class DatabaseManager{
                     usuarios.append(usuario ?? Usuario())
                     
                 }
-                print(usuarios.count)
+                //print(usuarios.count)
                 completion(usuarios)
                 
             }
@@ -81,7 +83,7 @@ class DatabaseManager{
                     usuarios.append(usuario ?? Usuario())
                     
                 }
-                print(usuarios.count)
+                //print(usuarios.count)
                 completion(usuarios)
                 
             }
@@ -106,7 +108,7 @@ class DatabaseManager{
                     usuarios.append(usuario ?? Usuario())
                     
                 }
-                print(usuarios.count)
+                //print(usuarios.count)
                 completion(usuarios)
                 
             }
@@ -129,12 +131,35 @@ class DatabaseManager{
         firestore.collection("Usuario").document(id).delete()
     }
     
-    func getAlumnos(){
+    
+//    func getAlumnos(){
+//        firestore.collection("Usuario").document("dDG9eowRcs7KSNP3GaRh").collection("Alumno").getDocuments{(snapshot,error) in
+//            if(error == nil){
+//                for doc in snapshot?.documents ?? []{
+//                    print(doc.data())
+//                }
+//            }
+//        }
+//    }
+    
+    
+    func getAlumnos(completion:@escaping([Alumno])-> Void){
         firestore.collection("Usuario").document("dDG9eowRcs7KSNP3GaRh").collection("Alumno").getDocuments{(snapshot,error) in
-            if(error == nil){
-                for doc in snapshot?.documents ?? []{
-                    print(doc.data())
+            if( error == nil){
+                var alumnos : [Alumno] = []
+                
+                for document in snapshot?.documents ?? []{
+                    var dict = document.data()
+                    dict["id"] = document.documentID
+                    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
+                    let alumno = try? self.decoder.decode(Alumno.self, from: data)
+                    alumnos.append(alumno ?? Alumno())
                 }
+                completion(alumnos)
+                
+            }
+            else{
+                completion([])
             }
         }
     }
