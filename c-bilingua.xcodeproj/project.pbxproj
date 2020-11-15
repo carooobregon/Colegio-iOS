@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09D2CB60B107EFFDCF04ACF4 /* Pods_c_bilingua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FEB83C2347B74450398B3A /* Pods_c_bilingua.framework */; };
+		0B2DFA412560D63B0092466C /* TableViewAlumnosDeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DFA402560D63B0092466C /* TableViewAlumnosDeUser.swift */; };
 		0B2E571E2553CEA60051C732 /* TableViewControllerGetUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */; };
 		0B7157052553A7B100D88231 /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157042553A7B100D88231 /* Alumno.swift */; };
 		0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2DFA402560D63B0092466C /* TableViewAlumnosDeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAlumnosDeUser.swift; sourceTree = "<group>"; };
 		0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerGetUsers.swift; sourceTree = "<group>"; };
 		0B7157042553A7B100D88231 /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
 		0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdmin.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */,
 				0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */,
+				0B2DFA402560D63B0092466C /* TableViewAlumnosDeUser.swift */,
 				0B71571D2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift */,
 				0B7CE65725533076008D20B2 /* MenuViewController.swift */,
 				0B7CE64B25533057008D20B2 /* CalificacionesViewController.swift */,
@@ -328,6 +331,7 @@
 				0B2E571E2553CEA60051C732 /* TableViewControllerGetUsers.swift in Sources */,
 				0B7CE65825533076008D20B2 /* ViewController.swift in Sources */,
 				0B7157052553A7B100D88231 /* Alumno.swift in Sources */,
+				0B2DFA412560D63B0092466C /* TableViewAlumnosDeUser.swift in Sources */,
 				0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */,
 				0FE28B9F25548CAC006DF48E /* (null) in Sources */,
 				0B71571A2553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift in Sources */,

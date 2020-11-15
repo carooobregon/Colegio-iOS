@@ -14,12 +14,10 @@ class Usuario: Codable {
     var fName : String = ""
     var lName : String  = ""
     var email : String = ""
-    var isAdmin : Bool = false
-    var isMaestro : Bool = false
-    var isPadre : Bool = false
-    
+    var role : Int = 0
+
     var telefono : String = ""
     var direccion : String  = ""
-    //var alumno : Alumno
+    var alumnos : [String] = []
     
 }
