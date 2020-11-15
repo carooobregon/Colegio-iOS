@@ -60,5 +60,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gilroy-Light.otf</string>
+		<string>Gilroy-ExtraBold.otf</string>
+		<string>Ubahn-Light.ttf</string>
+		<string>Ubahn.ttf</string>
+	</array>
 </dict>
 </plist>
