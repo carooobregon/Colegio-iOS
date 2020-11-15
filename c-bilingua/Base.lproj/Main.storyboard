@@ -905,7 +905,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="gotoCalif:" destination="dBT-tt-Hvh" eventType="touchUpInside" id="J4S-Cm-ez7"/>
                                     <segue destination="3Du-PD-hs3" kind="show" id="8gi-5H-H7N"/>
                                 </connections>
                             </button>
