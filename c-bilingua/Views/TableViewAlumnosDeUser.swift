@@ -33,15 +33,6 @@ class TableViewAlumnosDeUser: UITableViewController {
             self.valores = alumnos
             self.tableView.reloadData()
         }
-        var index = 0
-        for i  in valores{
-            if !listaAlumnos.contains(i.id){
-                valores.remove(at: index)
-            }
-            index += 1
-        }
-        
-        
         
     }
 

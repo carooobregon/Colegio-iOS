@@ -31,7 +31,7 @@ class DatabaseManager{
                     usuarios.append(usuario ?? Usuario())
                     
                     
-                    print(dict)
+                    //print(dict)
                     
                 }
                 completion(usuarios)
