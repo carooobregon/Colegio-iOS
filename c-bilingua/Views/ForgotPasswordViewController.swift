@@ -1,22 +1,22 @@
 //
-//  MenuViewController.swift
-//  CBMT
+//  ForgotPasswordViewController.swift
+//  c-bilingua
 //
-//  Created by martha.salinas on 18/10/20.
-//  Copyright © 2020 carooobregon. All rights reserved.
+//  Created by Caro Obregon on 14/11/20.
+//  Copyright © 2020 cbmt. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-//    override func viewDidDisappear(_ animated: Bool) {
-//        self.navigationController!.isNavigationBarHidden = true;
-//    }
+    
+
     /*
     // MARK: - Navigation
 
@@ -26,4 +26,5 @@ class MenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }
