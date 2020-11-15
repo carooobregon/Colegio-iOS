@@ -41,6 +41,7 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
     let boleta = [FakeCalificacion(materia: "Matematicas", nota: [100,94,98]),FakeCalificacion(materia: "Matematicas", nota: [100,94,98]), FakeCalificacion(materia: "Matematicas", nota: [100,94,98])]
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.isNavigationBarHidden = false;
         nombreAlumno.text = currAlumno?.fName
         grado.text = buildGrade()
         maestra.text = buildMaestra()

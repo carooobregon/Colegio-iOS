@@ -27,18 +27,22 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
 //        Alumno(nombre: "Caro Obregon"),
 //        Alumno(nombre: "Lucia Cantu")
     //]
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
     
     let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"];
     var selectedIndexPath: NSIndexPath = NSIndexPath()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.isNavigationBarHidden = false;
         tableView.delegate = self
         tableView.dataSource = self
        getInfo()
         // Do any additional setup after loading the view.
     }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        self.navigationController!.isNavigationBarHidden = false;
+//    }
     func getInfo(){
         DatabaseManager.shared.getAlumnos{ (alumnos) in
             self.listaAlumnos = alumnos
