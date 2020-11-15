@@ -18,6 +18,7 @@ class AlCalificacionesViewCell: UITableViewCell {
 
 class IntroCalificacionesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //DatabaseManager.shared.getAlumnos("dDG9eowRcs7KSNP3GaRh")
+    @IBOutlet weak var tableView: UITableView!
     
    
     
@@ -33,15 +34,15 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
        getInfo()
         // Do any additional setup after loading the view.
     }
     func getInfo(){
         DatabaseManager.shared.getAlumnos{ (alumnos) in
-            for i in alumnos{
-                self.listaAlumnos.append(i)
-                
-            }
+            self.listaAlumnos = alumnos
+            self.tableView.reloadData()
         }
         for i in listaAlumnos{
             print(i.fName)
