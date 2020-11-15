@@ -37,22 +37,18 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
         self.navigationController!.isNavigationBarHidden = false;
         tableView.delegate = self
         tableView.dataSource = self
-       getInfo()
+       //getInfo()
         // Do any additional setup after loading the view.
     }
 //    override func viewDidDisappear(_ animated: Bool) {
 //        self.navigationController!.isNavigationBarHidden = false;
 //    }
-    func getInfo(){
-        DatabaseManager.shared.getAlumnos{ (alumnos) in
-            self.listaAlumnos = alumnos
-            self.tableView.reloadData()
-        }
-        for i in listaAlumnos{
-            print(i.fName)
-            print("hola")
-        }
-    }
+//    func getInfo(){
+//        DatabaseManager.shared.getAlumnos{ (alumnos) in
+//            self.listaAlumnos = alumnos
+//            self.tableView.reloadData()
+//        }
+//    }
 
 //    MARK: - Metodos de protocolo Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

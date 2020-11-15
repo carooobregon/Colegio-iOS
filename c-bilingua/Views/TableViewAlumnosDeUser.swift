@@ -9,9 +9,17 @@
 import UIKit
 
 class TableViewAlumnosDeUser: UITableViewController {
+    
+    
+    var listaAlumnos = [String]()
+    var valores = [Alumno]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.isNavigationBarHidden = false;
+        title = "Alumnos"
+        getInfo()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -19,28 +27,46 @@ class TableViewAlumnosDeUser: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    func getInfo(){
+        DatabaseManager.shared.getAlumnos{ (alumnos) in
+            self.valores = alumnos
+            self.tableView.reloadData()
+        }
+        var index = 0
+        for i  in valores{
+            if !listaAlumnos.contains(i.id){
+                valores.remove(at: index)
+            }
+            index += 1
+        }
+        
+        
+        
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return valores.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
+        //print(valores[indexPath.row].fName)
+        
+        celda.textLabel?.text = valores[indexPath.row].fName
+        celda.detailTextLabel?.text = valores[indexPath.row].id
+        
 
-        // Configure the cell...
-
-        return cell
+        return celda
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
