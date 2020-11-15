@@ -7,4 +7,7 @@ target 'c-bilingua' do
 
   # Pods for c-bilingua
 	pod 'Firebase/Firestore'	
+  	pod 'Firebase/Core'
+  	pod 'Firebase/Auth'
+
 end
