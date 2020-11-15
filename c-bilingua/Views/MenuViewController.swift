@@ -12,7 +12,6 @@ class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController!.isNavigationBarHidden = true;
         // Do any additional setup after loading the view.
     }
 //    override func viewDidDisappear(_ animated: Bool) {
@@ -27,6 +26,4 @@ class MenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func gotoCalif(_ sender: UIButton) {
-    }
 }
