@@ -12,10 +12,12 @@ class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController!.isNavigationBarHidden = true;
         // Do any additional setup after loading the view.
     }
-    
+//    override func viewDidDisappear(_ animated: Bool) {
+//        self.navigationController!.isNavigationBarHidden = true;
+//    }
     /*
     // MARK: - Navigation
 

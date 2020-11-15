@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.isNavigationBarHidden = true;
         //DatabaseManager.shared.getAlumnos()
         //DatabaseManager.shared.deleteUser(id: "cXcPjoVbcb2rrJWXvLVM")
         //DatabaseManager.shared.editUser(id: "dDG9eowRcs7KSNP3GaRh", fName: "gabriela")
@@ -27,13 +28,13 @@ class ViewController: UIViewController {
         
         
         
-        DatabaseManager.shared.getUsuarios{ (usuarios) in
-            for i in usuarios{
-                print(i.id)
-                
-            }
-            
-        }
+//        DatabaseManager.shared.getUsuarios{ (usuarios) in
+//            for i in usuarios{
+//                print(i.id)
+//
+//            }
+//
+//        }
         // Do any additional setup after loading the view.
     }
 
