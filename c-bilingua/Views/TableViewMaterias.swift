@@ -28,8 +28,6 @@ class TableViewMaterias: UITableViewController {
     
     func getInfo(){
         DatabaseManager.shared.getMaterias{(materias) in
-           
-//
             for m in materias{
                 if(self.listaMaterias.contains(m.id)){
                     self.materiasDeAlumno.append(m)

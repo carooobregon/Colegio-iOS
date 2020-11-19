@@ -21,6 +21,7 @@ class ViewControllerAddUser: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title  = "Add User"
         
             // DatabaseManager.shared.createUser(fName: "Adriana", lName: "Corona Garza", direccion: "Avenida Santa maria #116", email: "adriana@colegiobilinguemarktwain.com", telefono: "8182662203", isPadre: true, isAdmin: true, isMaestro: false)
          

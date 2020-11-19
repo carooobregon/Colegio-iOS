@@ -14,11 +14,12 @@ class VCAddMateria: UIViewController {
     @IBOutlet weak var tfNombreMateria: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Add Materia"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func btnAddMateria(_ sender: Any) {
+        DatabaseManager.shared.createMateria(nombreMaestra: tfNombreMaestra.text!, nombreMateria: tfNombreMateria.text!)
     }
     
     /*

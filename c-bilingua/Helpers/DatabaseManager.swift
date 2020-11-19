@@ -18,6 +18,7 @@ class DatabaseManager{
     
     static let shared = DatabaseManager()
     
+    // MARK: - GetAll DB Records
     func getUsuarios(completion:@escaping([Usuario])-> Void){
         firestore.collection("Usuarios").getDocuments{( snapshot,error ) in
             if( error == nil){
@@ -29,10 +30,6 @@ class DatabaseManager{
                     
                     let usuario = try? self.decoder.decode(Usuario.self, from: data)
                     usuarios.append(usuario ?? Usuario())
-                    
-                    
-                    //print(dict)
-                    
                 }
                 completion(usuarios)
                 
@@ -70,9 +67,7 @@ class DatabaseManager{
                 for document in snapshot?.documents ?? []{
                     var dict = document.data()
                     dict["id"] = document.documentID
-                    
                     guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
-                    
                     let materia = try? self.decoder.decode(Materias.self, from: data)
                     materias.append(materia ?? Materias())
                 }
@@ -113,14 +108,26 @@ class DatabaseManager{
 //
 //    }
     
+    // MARK: - Create DB Records
+    
     func createUser(fName:String, lName:String, direccion:String, email:String, telefono:String, role:Int,alumnos:[String]){
         firestore.collection("Usuarios").addDocument(data:["fName":fName, "lName":lName, "direccion":direccion, "email":email, "telefono":telefono, "role": role, "alumnos":alumnos ])
     }
+   
+    func createAlumno(fName:String, lName:String, email:String, genero:Bool, grado:Int,  nivel:String, materias:[String]){
+        firestore.collection("Alumnos").addDocument(data:["fName":fName, "lName":lName, "email":email, "genero":genero, "grado": grado,"nivel":nivel, "materias":materias ])
+    }
     
+    func createMateria(nombreMaestra:String, nombreMateria:String){
+        firestore.collection("Materias").addDocument(data:["nombreMaestra":nombreMaestra, "nombreMateria":nombreMateria])
+    }
+    
+    // MARK: - Edit DB Records
     func editUser(id:String, fName:String){
         firestore.collection("Usuarios").document(id).updateData(["fName": fName])
     }
     
+    // MARK: - Delete DB Records
     func deleteUser(id:String){
         firestore.collection("Usuarios").document(id).delete()
     }
