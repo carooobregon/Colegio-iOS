@@ -17,19 +17,24 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        assignButtonColors()
+//        btnCalif.shadowLayer.fillColor = UIColor.systemBlue.cgColor
+//        assignButtonColors()
         // Do any additional setup after loading the view.
         
     }
-    
-    func assignButtonColors(){
-        btnCalif.shadowLayer.fillColor = UIColor.lightGray.cgColor
-
-        btnAvisos.shadowLayer.fillColor = UIColor.lightGray.cgColor
-
+    override func viewDidAppear(_ animated: Bool) {
+        assignButtonColors()
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
+    func assignButtonColors(){
+        btnCalif.changeColor(newColor: hexStringToCGColor(hex: "222B45"))
+        btnCalendario.changeColor(newColor: hexStringToCGColor(hex: "AC4040"))
+        btnAvisos.changeColor(newColor: hexStringToCGColor(hex: "FFB110"))
+        btnEstado.changeColor(newColor: hexStringToCGColor(hex: "11A05B"))
+    }
+    
+    
+    func hexStringToCGColor (hex:String) -> CGColor {
            var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
            if (cString.hasPrefix("#")) {
@@ -37,7 +42,7 @@ class MenuViewController: UIViewController {
            }
 
            if ((cString.count) != 6) {
-               return UIColor.gray
+            return UIColor.gray.cgColor
            }
 
            var rgbValue:UInt64 = 0
@@ -48,7 +53,7 @@ class MenuViewController: UIViewController {
                green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
                blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
                alpha: CGFloat(1.0)
-           )
+        ).cgColor
        }
 //    override func viewDidDisappear(_ animated: Bool) {
 //        self.navigationController!.isNavigationBarHidden = true;

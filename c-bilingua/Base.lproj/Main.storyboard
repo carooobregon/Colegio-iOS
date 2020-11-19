@@ -878,7 +878,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQr-32-TUR" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
                                 <rect key="frame" x="24" y="153" width="156" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70389777419999999" green="0.27888041730000002" blue="0.2784157693" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="19" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Calendario">
@@ -912,7 +911,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uq-Xp-oE7" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
                                 <rect key="frame" x="24" y="391" width="156" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.073183573779999997" green="0.63107979299999994" blue="0.360740006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="19" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Estado de  Cuenta">

@@ -2,7 +2,7 @@ import UIKit
 
 final class CustomButton: UIButton {
 
-    public var shadowLayer: CAShapeLayer!
+    private var shadowLayer: CAShapeLayer!
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -10,7 +10,7 @@ final class CustomButton: UIButton {
         if shadowLayer == nil {
             shadowLayer = CAShapeLayer()
             shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
-            shadowLayer.fillColor = UIColor.systemPink.cgColor
+            shadowLayer.fillColor = UIColor.white.cgColor
 
             shadowLayer.shadowColor = UIColor.darkGray.cgColor
             shadowLayer.shadowPath = shadowLayer.path
@@ -24,9 +24,8 @@ final class CustomButton: UIButton {
     }
     
     
-    func changeColor(){
-        shadowLayer.fillColor = UIColor.systemYellow.cgColor
-
+    func changeColor(newColor: CGColor){
+        shadowLayer.fillColor = newColor
     }
 
 }
