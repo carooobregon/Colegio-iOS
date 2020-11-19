@@ -13,6 +13,7 @@ class TableViewAlumnosDeUser: UITableViewController {
     
     var listaAlumnos = [String]()
     var valores = [Alumno]()
+    var alumnosDeUser = [Alumno]()
 
 
     override func viewDidLoad() {
@@ -20,6 +21,9 @@ class TableViewAlumnosDeUser: UITableViewController {
         self.navigationController!.isNavigationBarHidden = false;
         title = "Alumnos"
         getInfo()
+       
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,10 +35,15 @@ class TableViewAlumnosDeUser: UITableViewController {
     func getInfo(){
         DatabaseManager.shared.getAlumnos{ (alumnos) in
             self.valores = alumnos
+            
+            for l in self.listaAlumnos{
+                self.alumnosDeUser = alumnos.filter({$0.id == l})
+                print(self.alumnosDeUser)
+            }
             self.tableView.reloadData()
         }
-        
     }
+    
 
     // MARK: - Table view data source
 
@@ -43,16 +52,15 @@ class TableViewAlumnosDeUser: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return valores.count
+        return alumnosDeUser.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
-        //print(valores[indexPath.row].fName)
-        
-        celda.textLabel?.text = valores[indexPath.row].fName
-        celda.detailTextLabel?.text = valores[indexPath.row].id
+       
+        celda.textLabel?.text = alumnosDeUser[indexPath.row].fName
+        celda.detailTextLabel?.text = alumnosDeUser[indexPath.row].id
         
 
         return celda
