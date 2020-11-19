@@ -9,11 +9,12 @@ import UIKit
 
 class MateriaViewCell: UITableViewCell {
     
+    
     @IBOutlet weak var materia: UILabel!
     @IBOutlet weak var califAgo: UILabel!
     @IBOutlet weak var califSept: UILabel!
+    
     @IBOutlet weak var califOct: UILabel!
-    @IBOutlet weak var promedio: UILabel!
     
 }
 
@@ -32,19 +33,20 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
 
     // TODO: agregar back buttons y arreglar promedio general
     @IBOutlet weak var promedioView: UIView!
-    var currAlumno : Alumno?
+//    var currAlumno : Alumno?
     @IBOutlet weak var promedioAlumno: UILabel!
     @IBOutlet weak var nombreAlumno: UILabel!
-    @IBOutlet weak var grado: UILabel!
+    @IBOutlet weak var gradoAlumno: UILabel!
     @IBOutlet weak var maestra: UILabel!
+    
     let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"]
     let boleta = [FakeCalificacion(materia: "Matematicas", nota: [100,94,98]),FakeCalificacion(materia: "Matematicas", nota: [100,94,98]), FakeCalificacion(materia: "Matematicas", nota: [100,94,98])]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
-        nombreAlumno.text = currAlumno?.fName
-        grado.text = buildGrade()
-        maestra.text = buildMaestra()
+        nombreAlumno.text = "Nombre apellido"
+        gradoAlumno.text = "4 de Primaria"
+        maestra.text = "Maestra Apellido"
         promedioAlumno.text = String(93)
     }
 
@@ -60,7 +62,7 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         celda.califAgo.text = String(currBoleta[indexPath.row].nota[0])
         celda.califSept.text = String(currBoleta[indexPath.row].nota[1])
         celda.califOct.text = String(currBoleta[indexPath.row].nota[2])
-        celda.promedio.text = calculateAverage(agosto: currBoleta[indexPath.row].nota[0], sept: currBoleta[indexPath.row].nota[1], oct: currBoleta[indexPath.row].nota[2])
+//        celda.promedio.text = calculateAverage(agosto: currBoleta[indexPath.row].nota[0], sept: currBoleta[indexPath.row].nota[1], oct: currBoleta[indexPath.row].nota[2])
         celda.contentView.backgroundColor = hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
@@ -70,9 +72,9 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         return String((agosto + sept + oct)/3)
     }
     
-    func buildGrade() -> String{
-        return String(currAlumno!.grado) + " de " + currAlumno!.nivel
-    }
+//    func buildGrade() -> String{
+//        return String(currAlumno!.grado) + " de " + currAlumno!.nivel
+//    }
     
     func buildMaestra() -> String{
         return "Maestra: " + "Alicia Martinez"
