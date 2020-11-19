@@ -66,6 +66,11 @@
 		<string>Gilroy-ExtraBold.otf</string>
 		<string>Ubahn-Light.ttf</string>
 		<string>Ubahn.ttf</string>
+		<string>Gilroy-Bold.ttf</string>
+		<string>Gilroy-Heavy.ttf</string>
+		<string>Gilroy-Light.ttf</string>
+		<string>Gilroy-Medium.ttf</string>
+		<string>Gilroy-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

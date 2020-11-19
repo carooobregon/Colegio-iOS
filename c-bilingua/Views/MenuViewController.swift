@@ -24,6 +24,8 @@ class MenuViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         assignButtonColors()
+        assignEstadoTitle()
+        //        self.btnCalif.applyGradient(colours: [hexStringToUIColor(hex: "222B45"), .black])
     }
     
     func assignButtonColors(){
@@ -33,6 +35,17 @@ class MenuViewController: UIViewController {
         btnEstado.changeColor(newColor: hexStringToCGColor(hex: "11A05B"))
     }
     
+    func assignEstadoTitle(){
+        let para = NSMutableParagraphStyle()
+        para.alignment = .natural
+        para.lineBreakMode = .byWordWrapping
+        let s = NSAttributedString(
+            string: "Estado de Cuenta", attributes: [.paragraphStyle : para])
+        self.btnEstado.setAttributedTitle(s, for: .normal)
+        self.btnEstado.titleLabel?.numberOfLines = 0
+        self.btnEstado.titleLabel?.font = UIFont(name: "Gilroy-Bold", size: 22.0)
+        self.btnEstado.titleLabel?.textColor = UIColor.white
+    }
     
     func hexStringToCGColor (hex:String) -> CGColor {
            var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
@@ -55,6 +68,27 @@ class MenuViewController: UIViewController {
                alpha: CGFloat(1.0)
         ).cgColor
        }
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+         return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
 //    override func viewDidDisappear(_ animated: Bool) {
 //        self.navigationController!.isNavigationBarHidden = true;
 //    }
