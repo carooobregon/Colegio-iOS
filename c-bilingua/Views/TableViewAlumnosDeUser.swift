@@ -9,10 +9,7 @@
 import UIKit
 
 class TableViewAlumnosDeUser: UITableViewController {
-    
-    
     var listaAlumnos = [String]()
-    var valores = [Alumno]()
     var alumnosDeUser = [Alumno]()
 
 
@@ -21,10 +18,7 @@ class TableViewAlumnosDeUser: UITableViewController {
         self.navigationController!.isNavigationBarHidden = false;
         title = "Alumnos"
         getInfo()
-       
-        
-        
-
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,11 +28,10 @@ class TableViewAlumnosDeUser: UITableViewController {
     
     func getInfo(){
         DatabaseManager.shared.getAlumnos{ (alumnos) in
-            self.valores = alumnos
-            
             for l in self.listaAlumnos{
-                self.alumnosDeUser = alumnos.filter({$0.id == l})
-                print(self.alumnosDeUser)
+                self.alumnosDeUser =
+                    alumnos.filter({$0.id == l})
+                //print(self.alumnosDeUser)
             }
             self.tableView.reloadData()
         }
@@ -62,7 +55,6 @@ class TableViewAlumnosDeUser: UITableViewController {
         celda.textLabel?.text = alumnosDeUser[indexPath.row].fName
         celda.detailTextLabel?.text = alumnosDeUser[indexPath.row].id
         
-
         return celda
     }
     
@@ -102,14 +94,15 @@ class TableViewAlumnosDeUser: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let indice = tableView.indexPathForSelectedRow!
+        let vistaMaterias = segue.destination as! TableViewMaterias
+        vistaMaterias.listaMaterias = alumnosDeUser[indice.row].materias
     }
-    */
+    
 
 }

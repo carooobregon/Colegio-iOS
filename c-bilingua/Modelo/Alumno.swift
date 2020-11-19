@@ -16,9 +16,7 @@ class Alumno: Codable {
     var grado : Int = 0
     var genero : Bool = false
     var nivel : String = ""
-    //var dob : NSDate
     
+    var materias : [String] = []
     
-    
-   
 }

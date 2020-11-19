@@ -62,6 +62,27 @@ class DatabaseManager{
             }
         }
     }
+    
+    func getMaterias(completion:@escaping([Materias])-> Void){
+        firestore.collection("Materias").getDocuments{( snapshot,error ) in
+            if( error == nil){
+                var materias : [Materias] = []
+                for document in snapshot?.documents ?? []{
+                    var dict = document.data()
+                    dict["id"] = document.documentID
+                    print(dict)
+                    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
+                    let materia = try? self.decoder.decode(Materias.self, from: data)
+                    materias.append(materia ?? Materias())
+                }
+                //print(materias[0].id, "hola")
+                completion(materias)
+            }
+            else{
+                completion([])
+            }
+        }
+    }
 
 
 //
@@ -103,37 +124,6 @@ class DatabaseManager{
         firestore.collection("Usuarios").document(id).delete()
     }
     
-    
-//    func getAlumnos(){
-//        firestore.collection("Usuario").document("dDG9eowRcs7KSNP3GaRh").collection("Alumno").getDocuments{(snapshot,error) in
-//            if(error == nil){
-//                for doc in snapshot?.documents ?? []{
-//                    print(doc.data())
-//                }
-//            }
-//        }
-//    }
-    
-//
-//    func getAlumnos(completion:@escaping([Alumno])-> Void){
-//        firestore.collection("Usuario").document("dDG9eowRcs7KSNP3GaRh").collection("Alumno").getDocuments{(snapshot,error) in
-//            if( error == nil){
-//                var alumnos : [Alumno] = []
-//
-//                for document in snapshot?.documents ?? []{
-//                    var dict = document.data()
-//                    dict["id"] = document.documentID
-//                    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
-//                    let alumno = try? self.decoder.decode(Alumno.self, from: data)
-//                    alumnos.append(alumno ?? Alumno())
-//                }
-//                completion(alumnos)
-//
-//            }
-//            else{
-//                completion([])
-//            }
-//        }
-//    }
+
     
 }
