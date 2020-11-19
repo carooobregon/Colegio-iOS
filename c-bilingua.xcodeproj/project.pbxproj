@@ -41,9 +41,19 @@
 		0F230D8125526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0F230D8225526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0F230D8325526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0F4CD6A22560E3CD009A1124 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F4CD6A02560E3CD009A1124 /* Gilroy-Light.otf */; };
+		0F4CD6A32560E3CD009A1124 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F4CD6A12560E3CD009A1124 /* Gilroy-ExtraBold.otf */; };
+		0F65EFB9256610E20083246C /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65EFB4256610E10083246C /* Gilroy-Bold.ttf */; };
+		0F65EFBA256610E20083246C /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65EFB5256610E10083246C /* Gilroy-Heavy.ttf */; };
+		0F65EFBB256610E20083246C /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65EFB6256610E10083246C /* Gilroy-Light.ttf */; };
+		0F65EFBC256610E20083246C /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65EFB7256610E10083246C /* Gilroy-Medium.ttf */; };
+		0F65EFBD256610E20083246C /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65EFB8256610E20083246C /* Gilroy-Regular.ttf */; };
 		0F9C9D6225546CE30073CAA2 /* AvisosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */; };
 		0F9C9D6425546EE30073CAA2 /* Aviso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D6325546EE30073CAA2 /* Aviso.swift */; };
 		0F9C9D662554749D0073CAA2 /* AvisoCompletoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */; };
+		0FAFBD932560E63C00C16209 /* Ubahn-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAFBD912560E63C00C16209 /* Ubahn-Light.ttf */; };
+		0FAFBD942560E63C00C16209 /* Ubahn.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAFBD922560E63C00C16209 /* Ubahn.ttf */; };
+		0FAFBD982560EA7700C16209 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBD972560EA7700C16209 /* CustomButton.swift */; };
 		0FCA74222560C62A0018250B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA74212560C62A0018250B /* ForgotPasswordViewController.swift */; };
 		0FE28B9C25548BFA006DF48E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0FE28B9F25548CAC006DF48E /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -80,9 +90,19 @@
 		0F1A804A25524EC700CE25C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F1A805025524F6600CE25C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F230D7625526D340069F77F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F4CD6A02560E3CD009A1124 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		0F4CD6A12560E3CD009A1124 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		0F65EFB4256610E10083246C /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		0F65EFB5256610E10083246C /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
+		0F65EFB6256610E10083246C /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
+		0F65EFB7256610E10083246C /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		0F65EFB8256610E20083246C /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisosViewController.swift; sourceTree = "<group>"; };
 		0F9C9D6325546EE30073CAA2 /* Aviso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aviso.swift; sourceTree = "<group>"; };
 		0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisoCompletoViewController.swift; sourceTree = "<group>"; };
+		0FAFBD912560E63C00C16209 /* Ubahn-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubahn-Light.ttf"; sourceTree = "<group>"; };
+		0FAFBD922560E63C00C16209 /* Ubahn.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ubahn.ttf; sourceTree = "<group>"; };
+		0FAFBD972560EA7700C16209 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0FCA74212560C62A0018250B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Views/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		11FEB83C2347B74450398B3A /* Pods_c_bilingua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_c_bilingua.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD6286ECADB1CBEFBB6B997 /* Pods-c-bilingua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c-bilingua.release.xcconfig"; path = "Target Support Files/Pods-c-bilingua/Pods-c-bilingua.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +170,7 @@
 			children = (
 				0F1A803B25524EC500CE25C3 /* c-bilingua */,
 				0F1A803A25524EC500CE25C3 /* Products */,
+				0F4CD69F2560E3CD009A1124 /* Fonts */,
 				A7143E059ECA8AF5B10C7859 /* Pods */,
 				3A1CCAC3C6AF3F5ECF6849C1 /* Frameworks */,
 				0FE28B9A25548BCB006DF48E /* Recovered References */,
@@ -174,6 +195,7 @@
 				0F1A803E25524EC500CE25C3 /* SceneDelegate.swift */,
 				0F230D7525526D340069F77F /* Main.storyboard */,
 				0FCA74212560C62A0018250B /* ForgotPasswordViewController.swift */,
+				0FAFBD972560EA7700C16209 /* CustomButton.swift */,
 				C259EEFE255483660003466B /* EstadoCuentaViewController.swift */,
 				0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */,
 				0F9C9D6325546EE30073CAA2 /* Aviso.swift */,
@@ -184,6 +206,22 @@
 				0F1A804A25524EC700CE25C3 /* Info.plist */,
 			);
 			path = "c-bilingua";
+			sourceTree = "<group>";
+		};
+		0F4CD69F2560E3CD009A1124 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F65EFB4256610E10083246C /* Gilroy-Bold.ttf */,
+				0F65EFB5256610E10083246C /* Gilroy-Heavy.ttf */,
+				0F65EFB6256610E10083246C /* Gilroy-Light.ttf */,
+				0F65EFB7256610E10083246C /* Gilroy-Medium.ttf */,
+				0F65EFB8256610E20083246C /* Gilroy-Regular.ttf */,
+				0FAFBD912560E63C00C16209 /* Ubahn-Light.ttf */,
+				0FAFBD922560E63C00C16209 /* Ubahn.ttf */,
+				0F4CD6A02560E3CD009A1124 /* Gilroy-Light.otf */,
+				0F4CD6A12560E3CD009A1124 /* Gilroy-ExtraBold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		0FE28B9A25548BCB006DF48E /* Recovered References */ = {
@@ -270,10 +308,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F65EFBB256610E20083246C /* Gilroy-Light.ttf in Resources */,
+				0F65EFBC256610E20083246C /* Gilroy-Medium.ttf in Resources */,
+				0F65EFBD256610E20083246C /* Gilroy-Regular.ttf in Resources */,
 				0F1A804925524EC700CE25C3 /* LaunchScreen.storyboard in Resources */,
 				0F1A804625524EC700CE25C3 /* Assets.xcassets in Resources */,
 				0F230D7825526D340069F77F /* Main.storyboard in Resources */,
+				0F65EFB9256610E20083246C /* Gilroy-Bold.ttf in Resources */,
+				0F65EFBA256610E20083246C /* Gilroy-Heavy.ttf in Resources */,
+				0FAFBD942560E63C00C16209 /* Ubahn.ttf in Resources */,
+				0F4CD6A22560E3CD009A1124 /* Gilroy-Light.otf in Resources */,
+				0FAFBD932560E63C00C16209 /* Ubahn-Light.ttf in Resources */,
 				0F1A805125524F6600CE25C3 /* GoogleService-Info.plist in Resources */,
+				0F4CD6A32560E3CD009A1124 /* Gilroy-ExtraBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +377,7 @@
 				0B7CE67125533319008D20B2 /* Avisos.swift in Sources */,
 				0B2E571E2553CEA60051C732 /* TableViewControllerGetUsers.swift in Sources */,
 				0B7CE65825533076008D20B2 /* ViewController.swift in Sources */,
+				0FAFBD982560EA7700C16209 /* CustomButton.swift in Sources */,
 				0B7157052553A7B100D88231 /* Alumno.swift in Sources */,
 				0B2DFA412560D63B0092466C /* TableViewAlumnosDeUser.swift in Sources */,
 				0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */,

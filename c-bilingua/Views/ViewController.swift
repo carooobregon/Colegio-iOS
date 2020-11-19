@@ -16,11 +16,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var txtContrasena: UITextField!
     
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var forgotBtn: UIButton!
     
+    let styleHelper = StyleHelperLib()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        styleHelper.roundBordersButton(btn: loginBtn)
+        styleHelper.roundBordersButton(btn: forgotBtn)
+
         //DatabaseManager.shared.getAlumnos()
         //DatabaseManager.shared.deleteUser(id: "cXcPjoVbcb2rrJWXvLVM")
         //DatabaseManager.shared.editUser(id: "dDG9eowRcs7KSNP3GaRh", fName: "gabriela")
@@ -37,6 +44,10 @@ class ViewController: UIViewController {
 //            }
 //        }
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        styleHelper.wrapAttributedLabelInButton(btn: forgotBtn, msg: "¿Olvido su contraseña?", myFont: UIFont(name: "Gilroy-Medium", size: 14)!, myColor: styleHelper.hexStringToUIColor(hex: "2C385B"))
+//        loginBtn.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "22215B"))
     }
 
     @IBAction func ingresarAction(_ sender: Any) {
