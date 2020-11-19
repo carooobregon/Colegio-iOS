@@ -55,6 +55,11 @@ class VCAddAlumno: UIViewController {
         let grado = Int(tfGrado.text!) ?? -1
         
         DatabaseManager.shared.createAlumno(fName: tfFName.text!, lName: tfLName.text!, email: tfEmail.text!, genero: genero, grado: grado, nivel: nivel, materias: [])
+        
+        let alert = UIAlertController(title: "Alumno Agregado", message: "Alumno Agregado Correctamente.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

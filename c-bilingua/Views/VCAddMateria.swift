@@ -20,6 +20,11 @@ class VCAddMateria: UIViewController {
     
     @IBAction func btnAddMateria(_ sender: Any) {
         DatabaseManager.shared.createMateria(nombreMaestra: tfNombreMaestra.text!, nombreMateria: tfNombreMateria.text!)
+        
+        let alert = UIAlertController(title: "Materia Agregada", message: "Materia Agregada Correctamente.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     /*

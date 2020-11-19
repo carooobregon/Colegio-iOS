@@ -14,9 +14,6 @@
 		0B7157052553A7B100D88231 /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157042553A7B100D88231 /* Alumno.swift */; };
 		0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */; };
 		0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */; };
-		0B7157132553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157122553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift */; };
-		0B71571A2553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157192553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift */; };
-		0B71571E2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71571D2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift */; };
 		0B7CE64825533042008D20B2 /* IntroCalificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE64725533042008D20B2 /* IntroCalificacionesViewController.swift */; };
 		0B7CE64C25533058008D20B2 /* CalificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE64B25533057008D20B2 /* CalificacionesViewController.swift */; };
 		0B7CE65325533069008D20B2 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CE65225533069008D20B2 /* RoundedImageView.swift */; };
@@ -63,9 +60,6 @@
 		0B7157042553A7B100D88231 /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
 		0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdmin.swift; sourceTree = "<group>"; };
 		0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddUser.swift; sourceTree = "<group>"; };
-		0B7157122553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddAlumnosAUser.swift; sourceTree = "<group>"; };
-		0B7157192553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddCalificacionesAMateria.swift; sourceTree = "<group>"; };
-		0B71571D2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddMateriaAAlumno.swift; sourceTree = "<group>"; };
 		0B7CE64725533042008D20B2 /* IntroCalificacionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCalificacionesViewController.swift; sourceTree = "<group>"; };
 		0B7CE64B25533057008D20B2 /* CalificacionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalificacionesViewController.swift; sourceTree = "<group>"; };
 		0B7CE65225533069008D20B2 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
@@ -129,15 +123,12 @@
 				0B8C3A5925663E2000880BDC /* TVCGetAlumnos.swift */,
 				0B2DFA402560D63B0092466C /* TableViewAlumnosDeUser.swift */,
 				0B8C3A4D25662AF000880BDC /* VCAddAlumno.swift */,
-				0B71571D2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift */,
 				0B7CE65725533076008D20B2 /* MenuViewController.swift */,
 				0B7CE64B25533057008D20B2 /* CalificacionesViewController.swift */,
-				0B7157192553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift */,
 				0B7CE64725533042008D20B2 /* IntroCalificacionesViewController.swift */,
 				0B7CE65625533076008D20B2 /* ViewController.swift */,
 				0B7CE65225533069008D20B2 /* RoundedImageView.swift */,
 				0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */,
-				0B7157122553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -356,7 +347,6 @@
 				0B2DFA412560D63B0092466C /* TableViewAlumnosDeUser.swift in Sources */,
 				0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */,
 				0FE28B9F25548CAC006DF48E /* (null) in Sources */,
-				0B71571A2553ADC400D88231 /* ViewControllerAddCalificacionesAMateria.swift in Sources */,
 				0B7CE64C25533058008D20B2 /* CalificacionesViewController.swift in Sources */,
 				0B7CE67025533319008D20B2 /* EstadoDeCuenta.swift in Sources */,
 				0B7CE64825533042008D20B2 /* IntroCalificacionesViewController.swift in Sources */,
@@ -371,9 +361,7 @@
 				0B8C3A4E25662AF000880BDC /* VCAddAlumno.swift in Sources */,
 				0F230D8225526DA80069F77F /* (null) in Sources */,
 				0F1A803D25524EC500CE25C3 /* AppDelegate.swift in Sources */,
-				0B71571E2553AE1100D88231 /* ViewControllerAddMateriaAAlumno.swift in Sources */,
 				0B8C3A542566383F00880BDC /* VCAddAviso.swift in Sources */,
-				0B7157132553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift in Sources */,
 				0B7CE66E25533319008D20B2 /* CuotaPagada.swift in Sources */,
 				0B7CE67525533319008D20B2 /* CuotaPendiente.swift in Sources */,
 				0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */,

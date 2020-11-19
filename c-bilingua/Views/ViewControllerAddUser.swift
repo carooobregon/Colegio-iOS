@@ -45,6 +45,11 @@ class ViewControllerAddUser: UIViewController {
     
     @IBAction func addAlumno(_ sender: Any) {
         DatabaseManager.shared.createUser(fName: fName.text!, lName: lName.text!, direccion: direccion.text!, email: email.text!, telefono: telefono.text!, role:rolSwitcher.selectedSegmentIndex,alumnos: [])
+        
+        let alert = UIAlertController(title: "Usuario Agregado", message: "Usuario Agregado Correctamente.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
     
     }
     
