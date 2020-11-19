@@ -58,4 +58,20 @@ class StyleHelperLib: NSObject {
         ).cgColor
        }
 
+    func roundBordersButton(btn: UIButton){
+        btn.layer.cornerRadius = 10
+        btn.clipsToBounds = true
+    }
+
+    func wrapAttributedLabelInButton(btn: UIButton, msg: String, myFont: UIFont, myColor: UIColor){
+        let para = NSMutableParagraphStyle()
+        para.alignment = .natural
+        para.lineBreakMode = .byWordWrapping
+        let s = NSAttributedString(
+            string: msg, attributes: [.paragraphStyle : para])
+        btn.setAttributedTitle(s, for: .normal)
+        btn.titleLabel?.numberOfLines = 0
+        btn.titleLabel?.font = myFont
+        btn.titleLabel?.textColor = myColor
+    }
 }

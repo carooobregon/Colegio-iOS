@@ -26,7 +26,7 @@ class MenuViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         assignButtonColors()
-        assignEstadoTitle()
+        styleHelper.wrapAttributedLabelInButton(btn: btnEstado, msg: "Estado de Cuenta", myFont: UIFont(name: "Gilroy-Bold", size: 22.0)!, myColor: UIColor.white)
         //        self.btnCalif.applyGradient(colours: [hexStringToUIColor(hex: "222B45"), .black])
     }
     
@@ -36,19 +36,7 @@ class MenuViewController: UIViewController {
         btnAvisos.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "FFB110"))
         btnEstado.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "11A05B"))
     }
-    
-    func assignEstadoTitle(){
-        let para = NSMutableParagraphStyle()
-        para.alignment = .natural
-        para.lineBreakMode = .byWordWrapping
-        let s = NSAttributedString(
-            string: "Estado de Cuenta", attributes: [.paragraphStyle : para])
-        self.btnEstado.setAttributedTitle(s, for: .normal)
-        self.btnEstado.titleLabel?.numberOfLines = 0
-        self.btnEstado.titleLabel?.font = UIFont(name: "Gilroy-Bold", size: 22.0)
-        self.btnEstado.titleLabel?.textColor = UIColor.white
-    }
-    
+        
 //    override func viewDidDisappear(_ animated: Bool) {
 //        self.navigationController!.isNavigationBarHidden = true;
 //    }
