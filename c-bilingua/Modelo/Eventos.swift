@@ -8,6 +8,8 @@
 
 import UIKit
 
-class Eventos: NSObject {
-
+class Eventos: Codable {
+    var id : String = ""
+    var descripcion : String = ""
+    var titulo : String = ""
 }

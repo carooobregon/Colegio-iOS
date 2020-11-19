@@ -122,6 +122,16 @@ class DatabaseManager{
         firestore.collection("Materias").addDocument(data:["nombreMaestra":nombreMaestra, "nombreMateria":nombreMateria])
     }
     
+    func createEvento(titulo:String, descripcion:String){
+        firestore.collection("Eventos").addDocument(data:["titulo":titulo, "descripcion":descripcion])
+    }
+    
+    func createAviso(titulo:String, descripcion:String){
+        firestore.collection("Avisos").addDocument(data:["titulo":titulo, "descripcion":descripcion])
+    }
+    
+    
+    
     // MARK: - Edit DB Records
     func editUser(id:String, fName:String){
         firestore.collection("Usuarios").document(id).updateData(["fName": fName])
