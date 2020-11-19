@@ -32,7 +32,7 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
 
     // TODO: agregar back buttons y arreglar promedio general
     @IBOutlet weak var promedioView: UIView!
-//    var currAlumno : Alumno?
+    var currAlumno : Alumno?
     @IBOutlet weak var promedioAlumno: UILabel!
     @IBOutlet weak var nombreAlumno: UILabel!
     @IBOutlet weak var gradoAlumno: UILabel!
@@ -45,9 +45,9 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
-        nombreAlumno.text = "Nombre apellido"
-        gradoAlumno.text = "4 de Primaria"
-        maestra.text = "Maestra Apellido"
+        nombreAlumno.text = currAlumno!.fName + currAlumno!.lName
+        gradoAlumno.text = buildGrade()
+        maestra.text = buildMaestra()
         promedioAlumno.text = String(93)
     }
 
@@ -73,9 +73,9 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         return String((agosto + sept + oct)/3)
     }
     
-//    func buildGrade() -> String{
-//        return String(currAlumno!.grado) + " de " + currAlumno!.nivel
-//    }
+    func buildGrade() -> String{
+        return String(currAlumno!.grado) + " de " + currAlumno!.nivel
+    }
     
     func buildMaestra() -> String{
         return "Maestra: " + "Alicia Martinez"

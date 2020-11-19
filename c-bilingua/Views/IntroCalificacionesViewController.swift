@@ -57,20 +57,17 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
 
 //    MARK: - Metodos de protocolo Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return listaAlumnos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! AlCalificacionesViewCell
-//        if(listaAlumnos[indexPath.row].genero){
+        if(listaAlumnos[indexPath.row].genero){
             celda.imagen.image = UIImage(named: "girlpng")
-//        }
-//        celda.alNombre.text = listaAlumnos[indexPath.row].fName
-        celda.alNombre.text = "Nombre Apellido"
-//        celda.alGrado.text = String(listaAlumnos[indexPath.row].grado) + "° de " + listaAlumnos[indexPath.row].nivel
-        celda.alGrado.text = "# de Grado"
-        //celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
-        celda.alMaestra.text = "Maestra Lorem Ipsum"
+        }
+        celda.alNombre.text = listaAlumnos[indexPath.row].fName
+        celda.alGrado.text = String(listaAlumnos[indexPath.row].grado) + "° de " + listaAlumnos[indexPath.row].nivel
+//        celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
         celda.contentView.backgroundColor = styleHelper.hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
@@ -90,7 +87,7 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
         if ("showCalif" == segue.identifier){
             let indexPath = tableView.indexPathForSelectedRow
             let vistaDetalle  = segue.destination as! CalificacionesViewController
-//            vistaDetalle.currAlumno = listaAlumnos[indexPath!.row]
+            vistaDetalle.currAlumno = listaAlumnos[indexPath!.row]
         }
     }
     
