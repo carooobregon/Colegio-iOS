@@ -18,30 +18,29 @@ class AvisosViewCell: UITableViewCell {
 class AvisosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var listaAvisos = [
-        Aviso(titulo: "Posada", body: "Lorem ipsum dolor sit amet, conse ctet uradi piscing elit, sed do eiusmod tempor incididunt"),
-        Aviso(titulo: "Salida de clases", body: "Lorem ipsum dolor sit amet, conse ctet uradi piscing elit, sed do eiusmod tempor incididunt"),
-        Aviso(titulo: "Semana de Examenes", body: "Lorem ipsum dolor sit amet, conse ctet uradi piscing elit, sed do eiusmod tempor incididunt"),
-        Aviso(titulo: "Modalidad virtual", body: "Lorem ipsum dolor sit amet, conse ctet uradi piscing elit, sed do eiusmod tempor incididunt")
-    ]
-    
+    var avisosDB = [Avisos]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
-
+        getInfo()
         // Do any additional setup after loading the view.
     }
     
+    func getInfo(){
+        DatabaseManager.shared.getAvisos{(avisos) in
+            self.avisosDB = avisos
+            self.tableView.reloadData()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listaAvisos.count
+        return avisosDB.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda") as! AvisosViewCell
-        cell.titulo.text = listaAvisos[indexPath.row].titulo
-        cell.body.text = listaAvisos[indexPath.row].body
+        cell.titulo.text = avisosDB[indexPath.row].titulo
+        cell.body.text = avisosDB[indexPath.row].descripcion
         return cell
     }
 
@@ -56,9 +55,10 @@ class AvisosViewController: UIViewController, UITableViewDataSource, UITableView
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vistaAvisosCompleto = segue.destination as! AvisoCompletoViewController
-        let indice = tableView.indexPathForSelectedRow
+        let indice = tableView.indexPathForSelectedRow!
         
-        vistaAvisosCompleto.currAviso = listaAvisos[indice!.row]
+        vistaAvisosCompleto.tituloAviso = avisosDB[indice.row].titulo
+        vistaAvisosCompleto.descripcionAviso = avisosDB[indice.row].descripcion
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }

@@ -8,6 +8,17 @@
 
 import UIKit
 
+class customTableViewCell: UITableViewCell{
+    @IBOutlet weak var lblRol: UILabel!
+    @IBOutlet weak var lblFName: UILabel!
+    @IBOutlet weak var lblLName: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblTelefono: UILabel!
+    @IBOutlet weak var lblDireccion: UILabel!
+    
+    
+}
+
 class TableViewControllerGetUsers: UITableViewController {
 
     var listaUsers = [Usuario]()
@@ -16,7 +27,7 @@ class TableViewControllerGetUsers: UITableViewController {
         getInfo()
         self.navigationController!.isNavigationBarHidden = false;
 
-        self.title = "Usuarios"
+        self.title = "Get Usuarios"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,13 +55,32 @@ class TableViewControllerGetUsers: UITableViewController {
         
         return listaUsers.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! customTableViewCell
+        var rol = ""
+        switch listaUsers[indexPath.row].role {
+            case 0:
+                rol = "Admin"
+            case 1:
+                rol = "Maestro"
+            case 2:
+                rol = "Padre"
+            default:
+            break
+        }
         
-        celda.textLabel?.text = listaUsers[indexPath.row].fName
-        celda.detailTextLabel?.text = listaUsers[indexPath.row].id
+        celda.lblFName.text = listaUsers[indexPath.row].fName
+        celda.lblLName.text = listaUsers[indexPath.row].lName
+        celda.lblEmail.text = listaUsers[indexPath.row].email
+        celda.lblTelefono.text = listaUsers[indexPath.row].telefono
+        celda.lblDireccion.text = listaUsers[indexPath.row].direccion
+        celda.lblRol.text = rol
         
         return celda
     }

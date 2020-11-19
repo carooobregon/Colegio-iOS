@@ -7,6 +7,15 @@
 //
 
 import UIKit
+class GetAlumnosNormal: UITableViewCell{
+    @IBOutlet weak var lblFname: UILabel!
+    @IBOutlet weak var lblLname: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblGenero: UILabel!
+    @IBOutlet weak var lblGrado: UILabel!
+    @IBOutlet weak var lblNivel: UILabel!
+    
+}
 
 class TVCGetAlumnos: UITableViewController {
     var alumnosDB = [Alumno]()
@@ -40,12 +49,31 @@ class TVCGetAlumnos: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return alumnosDB.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
-        celda.textLabel?.text = alumnosDB[indexPath.row].fName
-        celda.detailTextLabel?.text = alumnosDB[indexPath.row].id
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! GetAlumnosNormal
+        
+        var genero = ""
+        switch alumnosDB[indexPath.row].genero {
+        case true:
+            genero = "Masculino"
+        case false:
+            genero = "Femenino"
+        }
+        let grado = alumnosDB[indexPath.row].grado
+        
+        
+        celda.lblFname.text = alumnosDB[indexPath.row].fName
+        celda.lblLname.text = alumnosDB[indexPath.row].lName
+        celda.lblEmail.text = alumnosDB[indexPath.row].email
+        celda.lblGenero.text = genero
+        celda.lblGrado.text = String(grado)
+        celda.lblNivel.text = alumnosDB[indexPath.row].nivel
         
         return celda
     }
