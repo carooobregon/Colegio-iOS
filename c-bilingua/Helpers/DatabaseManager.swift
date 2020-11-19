@@ -70,12 +70,13 @@ class DatabaseManager{
                 for document in snapshot?.documents ?? []{
                     var dict = document.data()
                     dict["id"] = document.documentID
-                    print(dict)
+                    
                     guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
+                    
                     let materia = try? self.decoder.decode(Materias.self, from: data)
                     materias.append(materia ?? Materias())
                 }
-                //print(materias[0].id, "hola")
+                
                 completion(materias)
             }
             else{

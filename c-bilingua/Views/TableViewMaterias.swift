@@ -29,13 +29,13 @@ class TableViewMaterias: UITableViewController {
     func getInfo(){
         DatabaseManager.shared.getMaterias{(materias) in
            
-            for m in self.listaMaterias{
-                self.materiasDeAlumno =
-                    materias.filter({$0.id == m })
+//
+            for m in materias{
+                if(self.listaMaterias.contains(m.id)){
+                    self.materiasDeAlumno.append(m)
+                }
             }
             self.tableView.reloadData()
-            
-            //print(self.materiasDeAlumno)
         }
     }
 
@@ -55,7 +55,7 @@ class TableViewMaterias: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
         
-        celda.textLabel?.text = materiasDeAlumno[indexPath.row].nombreMat
+        celda.textLabel?.text = materiasDeAlumno[indexPath.row].nombreMateria
         celda.detailTextLabel?.text = materiasDeAlumno[indexPath.row].id
         
 

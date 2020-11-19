@@ -11,8 +11,6 @@ import Foundation
 
 class Materias: Codable {
     var id : String = ""
-    var nombreMat : String = ""
+    var nombreMateria : String = ""
     var nombreMaestra : String = ""
-    
-    
 }
