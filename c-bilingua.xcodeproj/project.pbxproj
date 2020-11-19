@@ -50,6 +50,7 @@
 		0F9C9D6225546CE30073CAA2 /* AvisosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */; };
 		0F9C9D6425546EE30073CAA2 /* Aviso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D6325546EE30073CAA2 /* Aviso.swift */; };
 		0F9C9D662554749D0073CAA2 /* AvisoCompletoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */; };
+		0FA4D883256657860022C284 /* StyleHelperLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA4D882256657860022C284 /* StyleHelperLib.swift */; };
 		0FAFBD932560E63C00C16209 /* Ubahn-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAFBD912560E63C00C16209 /* Ubahn-Light.ttf */; };
 		0FAFBD942560E63C00C16209 /* Ubahn.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FAFBD922560E63C00C16209 /* Ubahn.ttf */; };
 		0FAFBD982560EA7700C16209 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBD972560EA7700C16209 /* CustomButton.swift */; };
@@ -98,6 +99,7 @@
 		0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisosViewController.swift; sourceTree = "<group>"; };
 		0F9C9D6325546EE30073CAA2 /* Aviso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aviso.swift; sourceTree = "<group>"; };
 		0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisoCompletoViewController.swift; sourceTree = "<group>"; };
+		0FA4D882256657860022C284 /* StyleHelperLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleHelperLib.swift; sourceTree = "<group>"; };
 		0FAFBD912560E63C00C16209 /* Ubahn-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubahn-Light.ttf"; sourceTree = "<group>"; };
 		0FAFBD922560E63C00C16209 /* Ubahn.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ubahn.ttf; sourceTree = "<group>"; };
 		0FAFBD972560EA7700C16209 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				0B7CE65C255332E5008D20B2 /* DatabaseManager.swift */,
+				0FA4D882256657860022C284 /* StyleHelperLib.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				0B7157132553AC6700D88231 /* ViewControllerAddAlumnosAUser.swift in Sources */,
 				0B7CE66E25533319008D20B2 /* CuotaPagada.swift in Sources */,
 				0B7CE67525533319008D20B2 /* CuotaPendiente.swift in Sources */,
+				0FA4D883256657860022C284 /* StyleHelperLib.swift in Sources */,
 				0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */,
 				0F1A803F25524EC500CE25C3 /* SceneDelegate.swift in Sources */,
 				0B7CE66F25533319008D20B2 /* Calificacion.swift in Sources */,
