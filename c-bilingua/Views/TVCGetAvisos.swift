@@ -1,35 +1,31 @@
 //
-//  TableViewControllerGetUsers.swift
+//  TVCGetAvisos.swift
 //  c-bilingua
 //
-//  Created by Gaby Corona on 11/5/20.
+//  Created by Gaby Corona on 11/19/20.
 //  Copyright © 2020 cbmt. All rights reserved.
 //
 
 import UIKit
 
-class TableViewControllerGetUsers: UITableViewController {
-
-    var listaUsers = [Usuario]()
+class TVCGetAvisos: UITableViewController {
+    var avisosDB = [Avisos]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Get Avisos"
         getInfo()
-        self.navigationController!.isNavigationBarHidden = false;
-
-        self.title = "Usuarios"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
     func getInfo(){
-        DatabaseManager.shared.getUsuarios{ (usuarios) in
-            self.listaUsers = usuarios
+        DatabaseManager.shared.getAvisos{(avisos) in
+            self.avisosDB = avisos
             self.tableView.reloadData()
         }
-        
-        
     }
 
     // MARK: - Table view data source
@@ -41,17 +37,17 @@ class TableViewControllerGetUsers: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        return listaUsers.count
+        return avisosDB.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
         
-        celda.textLabel?.text = listaUsers[indexPath.row].fName
-        celda.detailTextLabel?.text = listaUsers[indexPath.row].id
+        celda.textLabel?.text = avisosDB[indexPath.row].titulo
+        celda.detailTextLabel?.text = avisosDB[indexPath.row].descripcion
         
+
         return celda
     }
     
@@ -91,17 +87,14 @@ class TableViewControllerGetUsers: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indice = tableView.indexPathForSelectedRow!
-        let vistaAlumnos = segue.destination as! TableViewAlumnosDeUser
-        
-        vistaAlumnos.listaAlumnos = listaUsers[indice.row].alumnos
-     
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }

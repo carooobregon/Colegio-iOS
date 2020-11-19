@@ -9,10 +9,8 @@
 import UIKit
 
 class TableViewAlumnosDeUser: UITableViewController {
-    
-    
     var listaAlumnos = [String]()
-    var valores = [Alumno]()
+    var alumnosDeUser = [Alumno]()
 
 
     override func viewDidLoad() {
@@ -20,7 +18,7 @@ class TableViewAlumnosDeUser: UITableViewController {
         self.navigationController!.isNavigationBarHidden = false;
         title = "Alumnos"
         getInfo()
-
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,20 +28,15 @@ class TableViewAlumnosDeUser: UITableViewController {
     
     func getInfo(){
         DatabaseManager.shared.getAlumnos{ (alumnos) in
-            self.valores = alumnos
+            for l in self.listaAlumnos{
+                self.alumnosDeUser =
+                    alumnos.filter({$0.id == l})
+                //print(self.alumnosDeUser)
+            }
             self.tableView.reloadData()
         }
-        var index = 0
-        for i  in valores{
-            if !listaAlumnos.contains(i.id){
-                valores.remove(at: index)
-            }
-            index += 1
-        }
-        
-        
-        
     }
+    
 
     // MARK: - Table view data source
 
@@ -52,18 +45,16 @@ class TableViewAlumnosDeUser: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return valores.count
+        return alumnosDeUser.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
-        //print(valores[indexPath.row].fName)
+       
+        celda.textLabel?.text = alumnosDeUser[indexPath.row].fName
+        celda.detailTextLabel?.text = alumnosDeUser[indexPath.row].id
         
-        celda.textLabel?.text = valores[indexPath.row].fName
-        celda.detailTextLabel?.text = valores[indexPath.row].id
-        
-
         return celda
     }
     
@@ -103,14 +94,15 @@ class TableViewAlumnosDeUser: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let indice = tableView.indexPathForSelectedRow!
+        let vistaMaterias = segue.destination as! TableViewMaterias
+        vistaMaterias.listaMaterias = alumnosDeUser[indice.row].materias
     }
-    */
+    
 
 }

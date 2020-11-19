@@ -7,16 +7,10 @@
 //
 
 import UIKit
+import Foundation
 
-class Materias: NSObject {
-    var id : Int
-    var nombreMat : String
-    var nombreMaestra : String
-    
-    
-    override init() {
-        self.id = 1
-        self.nombreMat = "Moviles"
-        self.nombreMaestra = "Yolanda Martinez"
-    }
+class Materias: Codable {
+    var id : String = ""
+    var nombreMateria : String = ""
+    var nombreMaestra : String = ""
 }

@@ -21,6 +21,7 @@ class ViewControllerAddUser: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title  = "Add User"
         
             // DatabaseManager.shared.createUser(fName: "Adriana", lName: "Corona Garza", direccion: "Avenida Santa maria #116", email: "adriana@colegiobilinguemarktwain.com", telefono: "8182662203", isPadre: true, isAdmin: true, isMaestro: false)
          
@@ -44,6 +45,11 @@ class ViewControllerAddUser: UIViewController {
     
     @IBAction func addAlumno(_ sender: Any) {
         DatabaseManager.shared.createUser(fName: fName.text!, lName: lName.text!, direccion: direccion.text!, email: email.text!, telefono: telefono.text!, role:rolSwitcher.selectedSegmentIndex,alumnos: [])
+        
+        let alert = UIAlertController(title: "Usuario Agregado", message: "Usuario Agregado Correctamente.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
     
     }
     
