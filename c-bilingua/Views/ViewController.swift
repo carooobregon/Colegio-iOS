@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var txtContrasena: UITextField!
     
-    
+    @IBOutlet weak var loginBtn: CustomButton!
+    let styleHelper = StyleHelperLib()
     
     
     override func viewDidLoad() {
@@ -39,6 +40,9 @@ class ViewController: UIViewController {
 //
 //        }
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        loginBtn.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "22215B"))
     }
 
     @IBAction func ingresarAction(_ sender: Any) {

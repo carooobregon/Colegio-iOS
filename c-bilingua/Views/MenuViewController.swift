@@ -15,6 +15,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var btnCalendario: CustomButton!
     @IBOutlet weak var btnEstado: CustomButton!
     
+    let styleHelper = StyleHelperLib()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        btnCalif.shadowLayer.fillColor = UIColor.systemBlue.cgColor
@@ -29,10 +31,10 @@ class MenuViewController: UIViewController {
     }
     
     func assignButtonColors(){
-        btnCalif.changeColor(newColor: hexStringToCGColor(hex: "222B45"))
-        btnCalendario.changeColor(newColor: hexStringToCGColor(hex: "AC4040"))
-        btnAvisos.changeColor(newColor: hexStringToCGColor(hex: "FFB110"))
-        btnEstado.changeColor(newColor: hexStringToCGColor(hex: "11A05B"))
+        btnCalif.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "222B45"))
+        btnCalendario.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "AC4040"))
+        btnAvisos.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "FFB110"))
+        btnEstado.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "11A05B"))
     }
     
     func assignEstadoTitle(){
@@ -47,48 +49,6 @@ class MenuViewController: UIViewController {
         self.btnEstado.titleLabel?.textColor = UIColor.white
     }
     
-    func hexStringToCGColor (hex:String) -> CGColor {
-           var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-           if (cString.hasPrefix("#")) {
-               cString.remove(at: cString.startIndex)
-           }
-
-           if ((cString.count) != 6) {
-            return UIColor.gray.cgColor
-           }
-
-           var rgbValue:UInt64 = 0
-           Scanner(string: cString).scanHexInt64(&rgbValue)
-
-           return UIColor(
-               red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-               green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-               blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-               alpha: CGFloat(1.0)
-        ).cgColor
-       }
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-        if (cString.hasPrefix("#")) {
-            cString.remove(at: cString.startIndex)
-        }
-
-        if ((cString.count) != 6) {
-         return UIColor.gray
-        }
-
-        var rgbValue:UInt64 = 0
-        Scanner(string: cString).scanHexInt64(&rgbValue)
-
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
-    }
 //    override func viewDidDisappear(_ animated: Bool) {
 //        self.navigationController!.isNavigationBarHidden = true;
 //    }
