@@ -79,6 +79,46 @@ class DatabaseManager{
             }
         }
     }
+    
+    func getEventos(completion:@escaping([Eventos])-> Void){
+        firestore.collection("Eventos").getDocuments{( snapshot,error ) in
+            if( error == nil){
+                var eventos : [Eventos] = []
+                for document in snapshot?.documents ?? []{
+                    var dict = document.data()
+                    dict["id"] = document.documentID
+                    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
+                    let evento = try? self.decoder.decode(Eventos.self, from: data)
+                    eventos.append(evento ?? Eventos())
+                }
+                
+                completion(eventos)
+            }
+            else{
+                completion([])
+            }
+        }
+    }
+    
+    func getAvisos(completion:@escaping([Avisos])-> Void){
+        firestore.collection("Avisos").getDocuments{( snapshot,error ) in
+            if( error == nil){
+                var avisos : [Avisos] = []
+                for document in snapshot?.documents ?? []{
+                    var dict = document.data()
+                    dict["id"] = document.documentID
+                    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
+                    let aviso = try? self.decoder.decode(Avisos.self, from: data)
+                    avisos.append(aviso ?? Avisos())
+                }
+                
+                completion(avisos)
+            }
+            else{
+                completion([])
+            }
+        }
+    }
 
 
 //
