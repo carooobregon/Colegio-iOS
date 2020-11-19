@@ -12,8 +12,7 @@ class MateriaViewCell: UITableViewCell {
     
     @IBOutlet weak var materia: UILabel!
     @IBOutlet weak var califAgo: UILabel!
-    @IBOutlet weak var califSept: UILabel!
-    
+    @IBOutlet weak var califSep: UILabel!
     @IBOutlet weak var califOct: UILabel!
     
 }
@@ -60,7 +59,7 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
 
         celda.materia.text = currBoleta[indexPath.row].materia
         celda.califAgo.text = String(currBoleta[indexPath.row].nota[0])
-        celda.califSept.text = String(currBoleta[indexPath.row].nota[1])
+        celda.califSep.text = String(currBoleta[indexPath.row].nota[1])
         celda.califOct.text = String(currBoleta[indexPath.row].nota[2])
 //        celda.promedio.text = calculateAverage(agosto: currBoleta[indexPath.row].nota[0], sept: currBoleta[indexPath.row].nota[1], oct: currBoleta[indexPath.row].nota[2])
         celda.contentView.backgroundColor = hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
