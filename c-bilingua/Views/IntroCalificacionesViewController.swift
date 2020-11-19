@@ -56,7 +56,7 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
 
 //    MARK: - Metodos de protocolo Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listaAlumnos.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,7 +66,7 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
         }
         celda.alNombre.text = listaAlumnos[indexPath.row].fName
         celda.alGrado.text = String(listaAlumnos[indexPath.row].grado) + "° de " + listaAlumnos[indexPath.row].nivel
-        //celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
+//        celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
         celda.contentView.backgroundColor = hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
