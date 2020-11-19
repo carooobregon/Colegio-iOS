@@ -43,13 +43,8 @@ class ViewControllerAddUser: UIViewController {
     
     
     @IBAction func addAlumno(_ sender: Any) {
-        if(rol == 0){
-            DatabaseManager.shared.createUser(fName: fName.text!, lName: lName.text!, direccion: direccion.text!, email: email.text!, telefono: telefono.text!, isPadre: false, isAdmin: true, isMaestro: false)
-        }else if(rol == 1){
-            DatabaseManager.shared.createUser(fName: fName.text!, lName: lName.text!, direccion: direccion.text!, email: email.text!, telefono: telefono.text!, isPadre: false, isAdmin: false, isMaestro: true)
-        }else if( rol == 2){
-            DatabaseManager.shared.createUser(fName: fName.text!, lName: lName.text!, direccion: direccion.text!, email: email.text!, telefono: telefono.text!, isPadre: true, isAdmin: false, isMaestro: false)
-        }
+        DatabaseManager.shared.createUser(fName: fName.text!, lName: lName.text!, direccion: direccion.text!, email: email.text!, telefono: telefono.text!, role:rolSwitcher.selectedSegmentIndex,alumnos: [])
+    
     }
     
     /*

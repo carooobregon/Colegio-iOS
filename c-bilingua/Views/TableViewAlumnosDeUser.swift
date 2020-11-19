@@ -1,33 +1,46 @@
 //
-//  TableViewControllerGetUsers.swift
+//  TableViewAlumnosDeUser.swift
 //  c-bilingua
 //
-//  Created by Gaby Corona on 11/5/20.
+//  Created by Gaby Corona on 11/14/20.
 //  Copyright © 2020 cbmt. All rights reserved.
 //
 
 import UIKit
 
-class TableViewControllerGetUsers: UITableViewController {
+class TableViewAlumnosDeUser: UITableViewController {
+    
+    
+    var listaAlumnos = [String]()
+    var valores = [Alumno]()
 
-    var listaUsers = [Usuario]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        getInfo()
         self.navigationController!.isNavigationBarHidden = false;
+        title = "Alumnos"
+        getInfo()
 
-        self.title = "usuarios"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
     func getInfo(){
-        DatabaseManager.shared.getUsuarios{ (usuarios) in
-            self.listaUsers = usuarios
+        DatabaseManager.shared.getAlumnos{ (alumnos) in
+            self.valores = alumnos
             self.tableView.reloadData()
         }
+        var index = 0
+        for i  in valores{
+            if !listaAlumnos.contains(i.id){
+                valores.remove(at: index)
+            }
+            index += 1
+        }
+        
         
         
     }
@@ -35,23 +48,22 @@ class TableViewControllerGetUsers: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        
-        return listaUsers.count
+        return valores.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
+        //print(valores[indexPath.row].fName)
         
-        celda.textLabel?.text = listaUsers[indexPath.row].fName
-        celda.detailTextLabel?.text = listaUsers[indexPath.row].id
+        celda.textLabel?.text = valores[indexPath.row].fName
+        celda.detailTextLabel?.text = valores[indexPath.row].id
         
+
         return celda
     }
     
@@ -91,17 +103,14 @@ class TableViewControllerGetUsers: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indice = tableView.indexPathForSelectedRow!
-        let vistaAlumnos = segue.destination as! TableViewAlumnosDeUser
-        
-        vistaAlumnos.listaAlumnos = listaUsers[indice.row].alumnos
-     
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }

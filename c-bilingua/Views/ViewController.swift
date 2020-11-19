@@ -40,10 +40,8 @@ class ViewController: UIViewController {
         
 //        DatabaseManager.shared.getUsuarios{ (usuarios) in
 //            for i in usuarios{
-//                print(i.id)
-//
+//                print(i.fName)
 //            }
-//
 //        }
         // Do any additional setup after loading the view.
     }
