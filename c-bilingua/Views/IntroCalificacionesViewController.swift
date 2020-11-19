@@ -31,7 +31,8 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     
     let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"];
     var selectedIndexPath: NSIndexPath = NSIndexPath()
-
+    let styleHelper = StyleHelperLib()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
@@ -62,8 +63,8 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
         }
         celda.alNombre.text = listaAlumnos[indexPath.row].fName
         celda.alGrado.text = String(listaAlumnos[indexPath.row].grado) + "° de " + listaAlumnos[indexPath.row].nivel
-        //celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
-        celda.contentView.backgroundColor = hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
+//        celda.alMaestra.text = listaAlumnos[indexPath.row].maestra
+        celda.contentView.backgroundColor = styleHelper.hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
     }
@@ -71,32 +72,7 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120.0
     }
-    
-    // MARK: Helper methods
-    
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-        if (cString.hasPrefix("#")) {
-            cString.remove(at: cString.startIndex)
-        }
-
-        if ((cString.count) != 6) {
-            return UIColor.gray
-        }
-
-        var rgbValue:UInt64 = 0
-        Scanner(string: cString).scanHexInt64(&rgbValue)
-
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
-    }
-    
-    
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showCalif", sender: self)
     }
