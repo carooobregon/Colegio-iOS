@@ -56,7 +56,7 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! AlCalificacionesViewCell
         if(listaAlumnos[indexPath.row].genero){
-            celda.imagen.image = UIImage(named: "boypng")
+            celda.imagen.image = UIImage(named: "boy")
         }else{
             celda.imagen.image = UIImage(named: "girlpng")
         }
