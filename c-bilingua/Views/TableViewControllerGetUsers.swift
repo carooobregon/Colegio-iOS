@@ -39,8 +39,7 @@ class TableViewControllerGetUsers: UITableViewController {
             self.listaUsers = usuarios
             self.tableView.reloadData()
         }
-        
-        
+         
     }
 
     // MARK: - Table view data source

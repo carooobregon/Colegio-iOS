@@ -196,8 +196,12 @@ class DatabaseManager{
     
     
     // MARK: - Edit DB Records
-    func editUser(id:String, fName:String){
-        firestore.collection("Usuarios").document(id).updateData(["fName": fName])
+    func editUser(id:String, alumnos:[String]){
+        firestore.collection("Usuarios").document(id).updateData(["alumnos": alumnos])
+    }
+    
+    func editAlumno(id:String, materias:[String]){
+        firestore.collection("Alumnos").document(id).updateData(["materias": materias])
     }
     
     // MARK: - Delete DB Records

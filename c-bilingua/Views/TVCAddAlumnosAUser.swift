@@ -1,90 +1,68 @@
 //
-//  TableViewAlumnosDeUser.swift
+//  TVCAddAlumnosAUser.swift
 //  c-bilingua
 //
-//  Created by Gaby Corona on 11/14/20.
+//  Created by Gaby Corona on 11/19/20.
 //  Copyright © 2020 cbmt. All rights reserved.
 //
 
 import UIKit
 
-class GetAlumnosCell : UITableViewCell {
-    @IBOutlet weak var lblFname: UILabel!
-    @IBOutlet weak var lblLname: UILabel!
-    @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var lblGenero: UILabel!
-    @IBOutlet weak var lblGrado: UILabel!
-    @IBOutlet weak var lblNivel: UILabel!
-    
-}
+class TVCAddAlumnosAUser: UITableViewController {
 
-
-class TableViewAlumnosDeUser: UITableViewController {
-    var listaAlumnos = [String]()
-    var alumnosDeUser = [Alumno]()
-
-
+    var listaUsers = [Usuario]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController!.isNavigationBarHidden = false;
-        title = "Alumnos"
+        self.title = "Selecciona User"
         getInfo()
-    
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    func getInfo(){
 
-        
-        DatabaseManager.shared.getAlumnos{ (alumnos) in
-            for a in alumnos{
-                if( self.listaAlumnos.contains(a.id)){
-                    self.alumnosDeUser.append(a)
-                }
-            }
-           self.tableView.reloadData()
+    func getInfo(){
+        DatabaseManager.shared.getUsuarios{ (usuarios) in
+            self.listaUsers = usuarios
+            self.tableView.reloadData()
         }
     }
     
-
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return alumnosDeUser.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        // #warning Incomplete implementation, return the number of rows
+        return listaUsers.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! GetAlumnosCell
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
         
-        var genero = ""
-        switch alumnosDeUser[indexPath.row].genero {
-        case true:
-            genero = "Masculino"
-        case false:
-            genero = "Femenino"
+        var role = ""
+        switch listaUsers[indexPath.row].role {
+        case 0:
+            role = "Admin"
+        case 1:
+            role = "Maestro"
+        case 2:
+            role = "Padre"
+        default:
+            break
         }
-        let grado = alumnosDeUser[indexPath.row].grado
         
+        celda.textLabel?.text = listaUsers[indexPath.row].fName + " " + listaUsers[indexPath.row].lName
+        celda.detailTextLabel?.text = role
         
-        celda.lblFname.text = alumnosDeUser[indexPath.row].fName
-        celda.lblLname.text = alumnosDeUser[indexPath.row].lName
-        celda.lblEmail.text = alumnosDeUser[indexPath.row].email
-        celda.lblGenero.text = genero
-        celda.lblGrado.text = String(grado)
-        celda.lblNivel.text = alumnosDeUser[indexPath.row].nivel
 
         return celda
     }
@@ -131,10 +109,11 @@ class TableViewAlumnosDeUser: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indice = tableView.indexPathForSelectedRow!
-        let vistaMaterias = segue.destination as! TableViewMaterias
-        vistaMaterias.listaMaterias = alumnosDeUser[indice.row].materias
-      
-        vistaMaterias.listaCalifs = alumnosDeUser[indice.row].calificaciones
+        let vistaAlumnos = segue.destination as! TVCSelectAlumnotoAdd
+        
+        vistaAlumnos.nombreUser = listaUsers[indice.row].fName + " " + listaUsers[indice.row].lName
+        vistaAlumnos.idUser = listaUsers[indice.row].id
+        vistaAlumnos.alumnosActuales = listaUsers[indice.row].alumnos
     }
     
 
