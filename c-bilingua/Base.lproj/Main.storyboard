@@ -139,91 +139,172 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ko6-rI-x6v">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="740"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibF-2E-ShA">
-                                                <rect key="frame" x="32" y="150" width="314" height="305"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibF-2E-ShA">
+                                                <rect key="frame" x="32" y="125" width="314" height="305"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colegiatura Agosto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDp-Ah-R6u">
-                                                        <rect key="frame" x="8" y="8" width="146" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDp-Ah-R6u">
+                                                        <rect key="frame" x="8" y="8" width="177" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Colegiatura Agosto">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$9,999.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-Pf-18b">
-                                                        <rect key="frame" x="215" y="8" width="79" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-Pf-18b">
+                                                        <rect key="frame" x="215" y="8" width="91" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="$9,999.00">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$500.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEj-lo-OWj">
-                                                        <rect key="frame" x="215" y="49" width="65" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEj-lo-OWj">
+                                                        <rect key="frame" x="215" y="49" width="87" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="$500.00">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cuota Sociedad de Padres" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNJ-Ge-rOU">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNJ-Ge-rOU">
                                                         <rect key="frame" x="8" y="37" width="146" height="45"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" red="0.10216494650000001" green="0.1091907993" blue="0.30349591370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Cuota Sociedad de Padres">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.10216494650000001" green="0.1091907993" blue="0.30349591370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="15" name="Gilroy-Regular"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Promocion 2 Alumnos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfZ-gN-RG7">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfZ-gN-RG7">
                                                         <rect key="frame" x="8" y="120" width="150" height="45"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" red="0.10216494650000001" green="0.1091907993" blue="0.30349591370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Promocion 2 Alumnos">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.10216494650000001" green="0.1091907993" blue="0.30349591370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="15" name="Gilroy-Regular"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descuentos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFs-3l-ByV">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFs-3l-ByV">
                                                         <rect key="frame" x="8" y="93" width="150" height="45"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" red="0.10216494650000001" green="0.1091907993" blue="0.30349591370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Descuentos">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.10216494650000001" green="0.1091907993" blue="0.30349591370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="20" name="Gilroy-Regular"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha limite para pagar 01/07/2020" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOv-aM-Yqg">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOv-aM-Yqg">
                                                         <rect key="frame" x="64" y="256" width="242" height="45"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" red="0.10216494650000001" green="0.1091907993" blue="0.30349591370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Fecha limite para pagar 01/07/2020">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.10216494650000001" green="0.1091907993" blue="0.30349591370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="15" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- $100.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziD-UL-8rX">
-                                                        <rect key="frame" x="215" y="132" width="75" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziD-UL-8rX">
+                                                        <rect key="frame" x="215" y="132" width="73" height="20"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="- $100.00">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$10,399.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ur-2u-WAh">
-                                                        <rect key="frame" x="215" y="184" width="87" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ur-2u-WAh">
+                                                        <rect key="frame" x="215" y="184" width="107" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="$10,399.00">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$12,062.84" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMb-qI-VXh">
-                                                        <rect key="frame" x="215" y="223" width="87" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMb-qI-VXh">
+                                                        <rect key="frame" x="215" y="223" width="99" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="$12,062.84">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtotal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-56-gWo">
-                                                        <rect key="frame" x="8" y="184" width="64" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-56-gWo">
+                                                        <rect key="frame" x="8" y="184" width="146" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Subtotal">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total + IVA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-LL-1Ar">
-                                                        <rect key="frame" x="8" y="219" width="81" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-LL-1Ar">
+                                                        <rect key="frame" x="8" y="219" width="177" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Total + IVA">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ihd-N2-PbS">
@@ -243,28 +324,100 @@
                                                     <constraint firstAttribute="width" constant="314" id="qAH-qp-jzX"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-Yd-Uji">
-                                                <rect key="frame" x="29" y="532" width="321" height="149"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmX-LX-o5E">
+                                                <rect key="frame" x="32" y="450" width="317" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="QFe-9Y-Mxa"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="tJc-aM-gJG"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Cuotas Pagadas">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="30" name="Gilroy-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-Wh-hBd">
+                                                <rect key="frame" x="32" y="26" width="327" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="Fbn-1u-7vx"/>
+                                                    <constraint firstAttribute="height" constant="48" id="s3x-Bp-RjR"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Estado de Cuenta">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="38" name="Gilroy-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-kW-sgF">
+                                                <rect key="frame" x="32" y="81" width="314" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="Di7-Ud-qOA"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="243" id="Euz-tJ-QKl"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Cuotas Pendientes">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="30" name="Gilroy-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-Yd-Uji">
+                                                <rect key="frame" x="32" y="496" width="321" height="149"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colegiatura Julio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y04-nw-J46">
-                                                        <rect key="frame" x="8" y="8" width="128" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y04-nw-J46">
+                                                        <rect key="frame" x="8" y="8" width="148" height="20"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Colegiatura Julio">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtotal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9h-Lk-i5H">
-                                                        <rect key="frame" x="8" y="61" width="64" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9h-Lk-i5H">
+                                                        <rect key="frame" x="8" y="61" width="97" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Subtotal">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total + IVA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-tG-jZT">
-                                                        <rect key="frame" x="8" y="96" width="81" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-tG-jZT">
+                                                        <rect key="frame" x="8" y="96" width="106" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Total + IVA">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6v-wc-8JY">
@@ -272,25 +425,46 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$10,399.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-LL-xIb">
-                                                        <rect key="frame" x="215" y="64" width="87" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-LL-xIb">
+                                                        <rect key="frame" x="215" y="64" width="98" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="$10,399.00">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$12,062.84" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGQ-l6-CcC">
-                                                        <rect key="frame" x="215" y="112" width="87" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGQ-l6-CcC">
+                                                        <rect key="frame" x="215" y="112" width="98" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="$12,062.84">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$9,999.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-vT-dvZ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-vT-dvZ">
                                                         <rect key="frame" x="223" y="7" width="79" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="$9,999.00">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="Gilroy-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -300,48 +474,18 @@
                                                     <constraint firstAttribute="width" constant="321" id="ldf-L6-bA0"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuotas Pagadas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmX-LX-o5E">
-                                                <rect key="frame" x="29" y="480" width="210" height="36"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="QFe-9Y-Mxa"/>
-                                                    <constraint firstAttribute="width" constant="210" id="tJc-aM-gJG"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado de Cuenta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-Wh-hBd">
-                                                <rect key="frame" x="24" y="26" width="327" height="48"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="327" id="Fbn-1u-7vx"/>
-                                                    <constraint firstAttribute="height" constant="48" id="s3x-Bp-RjR"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                                <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuotas Pendientes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIh-kW-sgF">
-                                                <rect key="frame" x="32" y="93" width="243" height="36"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="Di7-Ud-qOA"/>
-                                                    <constraint firstAttribute="width" constant="243" id="Euz-tJ-QKl"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="ibF-2E-ShA" firstAttribute="leading" secondItem="Ko6-rI-x6v" secondAttribute="leading" constant="32" id="7Tn-xw-HSO"/>
                                             <constraint firstItem="ibF-2E-ShA" firstAttribute="top" secondItem="ZIh-kW-sgF" secondAttribute="bottom" constant="21" id="8Wo-t5-Evq"/>
                                             <constraint firstItem="WXQ-Yd-Uji" firstAttribute="top" secondItem="HmX-LX-o5E" secondAttribute="bottom" constant="16" id="BEV-KA-s43"/>
-                                            <constraint firstItem="P2O-Wh-hBd" firstAttribute="leading" secondItem="Ko6-rI-x6v" secondAttribute="leading" constant="24" id="HCr-z3-CYN"/>
+                                            <constraint firstItem="P2O-Wh-hBd" firstAttribute="leading" secondItem="Ko6-rI-x6v" secondAttribute="leading" constant="32" id="HCr-z3-CYN"/>
                                             <constraint firstItem="ZIh-kW-sgF" firstAttribute="top" secondItem="P2O-Wh-hBd" secondAttribute="bottom" constant="19" id="K63-Hj-7ZB"/>
-                                            <constraint firstAttribute="trailing" secondItem="HmX-LX-o5E" secondAttribute="trailing" constant="136" id="M1K-11-WHW"/>
+                                            <constraint firstAttribute="trailing" secondItem="HmX-LX-o5E" secondAttribute="trailing" constant="29" id="M1K-11-WHW"/>
                                             <constraint firstItem="ZIh-kW-sgF" firstAttribute="top" secondItem="P2O-Wh-hBd" secondAttribute="bottom" constant="19" id="M50-Ng-v2X"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="740" id="OGL-qe-6CH"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZIh-kW-sgF" secondAttribute="trailing" constant="100" id="TrU-M4-tpq"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZIh-kW-sgF" secondAttribute="trailing" constant="29" id="TrU-M4-tpq"/>
                                             <constraint firstItem="ZIh-kW-sgF" firstAttribute="leading" secondItem="Ko6-rI-x6v" secondAttribute="leading" constant="32" id="Vum-y8-0dm"/>
                                             <constraint firstAttribute="height" constant="740" id="X6A-zX-otu"/>
                                             <constraint firstItem="P2O-Wh-hBd" firstAttribute="top" secondItem="Ko6-rI-x6v" secondAttribute="top" constant="26" id="XdK-G5-gAw"/>
@@ -350,7 +494,7 @@
                                             <constraint firstItem="ibF-2E-ShA" firstAttribute="top" secondItem="ZIh-kW-sgF" secondAttribute="bottom" constant="21" id="dqf-ri-vAS"/>
                                             <constraint firstItem="WXQ-Yd-Uji" firstAttribute="top" secondItem="HmX-LX-o5E" secondAttribute="bottom" constant="16" id="fCq-8p-kV0"/>
                                             <constraint firstItem="HmX-LX-o5E" firstAttribute="top" secondItem="ibF-2E-ShA" secondAttribute="bottom" constant="25" id="jzZ-tA-Nls"/>
-                                            <constraint firstAttribute="trailing" secondItem="P2O-Wh-hBd" secondAttribute="trailing" constant="24" id="keM-Xx-Zpa"/>
+                                            <constraint firstAttribute="trailing" secondItem="P2O-Wh-hBd" secondAttribute="trailing" constant="16" id="keM-Xx-Zpa"/>
                                             <constraint firstItem="HmX-LX-o5E" firstAttribute="leading" secondItem="Ko6-rI-x6v" secondAttribute="leading" constant="29" id="lDV-Gc-2JR"/>
                                             <constraint firstItem="WXQ-Yd-Uji" firstAttribute="leading" secondItem="Ko6-rI-x6v" secondAttribute="leading" constant="29" id="lfm-mP-wNd"/>
                                             <constraint firstItem="HmX-LX-o5E" firstAttribute="top" secondItem="ibF-2E-ShA" secondAttribute="bottom" constant="25" id="ngA-iV-dTD"/>
@@ -385,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BB-tL-wbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4693.6000000000004" y="-603.14842578710648"/>
+            <point key="canvasLocation" x="4693.6000000000004" y="-603.59820089955031"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
