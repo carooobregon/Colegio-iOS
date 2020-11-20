@@ -37,6 +37,7 @@
 		0B8C3A542566383F00880BDC /* VCAddAviso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8C3A532566383F00880BDC /* VCAddAviso.swift */; };
 		0B8C3A5725663E0C00880BDC /* TVCGetMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8C3A5625663E0C00880BDC /* TVCGetMaterias.swift */; };
 		0B8C3A5A25663E2000880BDC /* TVCGetAlumnos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8C3A5925663E2000880BDC /* TVCGetAlumnos.swift */; };
+		0BF49B8B256775CD001F7904 /* TVCCalificacionesUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF49B8A256775CD001F7904 /* TVCCalificacionesUser.swift */; };
 		0F1A803D25524EC500CE25C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A803C25524EC500CE25C3 /* AppDelegate.swift */; };
 		0F1A803F25524EC500CE25C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A803E25524EC500CE25C3 /* SceneDelegate.swift */; };
 		0F1A804625524EC700CE25C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F1A804525524EC700CE25C3 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		0B8C3A532566383F00880BDC /* VCAddAviso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCAddAviso.swift; sourceTree = "<group>"; };
 		0B8C3A5625663E0C00880BDC /* TVCGetMaterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCGetMaterias.swift; sourceTree = "<group>"; };
 		0B8C3A5925663E2000880BDC /* TVCGetAlumnos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCGetAlumnos.swift; sourceTree = "<group>"; };
+		0BF49B8A256775CD001F7904 /* TVCCalificacionesUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCCalificacionesUser.swift; sourceTree = "<group>"; };
 		0F1A803925524EC500CE25C3 /* c-bilingua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "c-bilingua.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1A803C25524EC500CE25C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F1A803E25524EC500CE25C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				0B8C3A5625663E0C00880BDC /* TVCGetMaterias.swift */,
 				0B0C057325664F8D00C6226D /* TVCGetAvisos.swift */,
 				0B0C057625664F9D00C6226D /* TVCGetEventos.swift */,
+				0BF49B8A256775CD001F7904 /* TVCCalificacionesUser.swift */,
 				0B28888625674AEB00FD35BE /* TVCCalificacionesdeAlumno.swift */,
 				0B8C3A532566383F00880BDC /* VCAddAviso.swift */,
 				0B8C3A4A25661EDA00880BDC /* VCAddMateria.swift */,
@@ -429,6 +432,7 @@
 				0B7CE67025533319008D20B2 /* EstadoDeCuenta.swift in Sources */,
 				0B7CE64825533042008D20B2 /* IntroCalificacionesViewController.swift in Sources */,
 				0F230D8025526DA80069F77F /* (null) in Sources */,
+				0BF49B8B256775CD001F7904 /* TVCCalificacionesUser.swift in Sources */,
 				C26C1EA7256745DD003EC642 /* CalendarViewController.swift in Sources */,
 				0B8C3A5A25663E2000880BDC /* TVCGetAlumnos.swift in Sources */,
 				0F230D8125526DA80069F77F /* (null) in Sources */,

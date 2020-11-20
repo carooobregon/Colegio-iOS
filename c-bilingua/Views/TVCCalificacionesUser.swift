@@ -1,5 +1,5 @@
 //
-//  TVCCalificacionesdeAlumno.swift
+//  TVCCalificacionesUser.swift
 //  c-bilingua
 //
 //  Created by Gaby Corona on 11/19/20.
@@ -8,30 +8,30 @@
 
 import UIKit
 
-class TVCCalificacionesdeAlumno: UITableViewController {
-
+class TVCCalificacionesUser: UITableViewController {
+    
+    
     var idMateria : String = ""
     var nombreMateria : String = ""
     var califsAlumno : [String] = []
     
     var calificacionesBD = [Calificacion]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.navigationController!.isNavigationBarHidden = false;
 
         self.title = "Calificaciones de " + nombreMateria
        
         getInfo()
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    
     func getInfo(){
         DatabaseManager.shared.getCalificaciones{ (calificaciones) in
            // self.calificacionesBD = calificaciones
