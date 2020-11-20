@@ -12,4 +12,5 @@ class Eventos: Codable {
     var id : String = ""
     var descripcion : String = ""
     var titulo : String = ""
+    var dia : Int = 0
 }

@@ -1177,7 +1177,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WN-59-Grr">
-                                <rect key="frame" x="116" y="308" width="79" height="30"/>
+                                <rect key="frame" x="114" y="362" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Evento"/>
                                 <connections>
@@ -1186,6 +1186,19 @@
                                     <action selector="btnAddMateria:" destination="t4n-IM-Ket" eventType="touchUpInside" id="Bdc-ia-GlR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="día" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdc-Ml-KES">
+                                <rect key="frame" x="23" y="299" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-Fq-8MN">
+                                <rect key="frame" x="114" y="320" width="245" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hjt-dn-KSm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1194,6 +1207,7 @@
                     <connections>
                         <outlet property="tfDesc" destination="SvS-Zc-XcM" id="KER-ZM-wxL"/>
                         <outlet property="tfTitulo" destination="szS-GT-Uqj" id="598-D0-eTa"/>
+                        <outlet property="tfdia" destination="EWS-Fq-8MN" id="X9e-0a-rF9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8z-YN-wgs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

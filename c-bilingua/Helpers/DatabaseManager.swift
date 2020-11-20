@@ -185,8 +185,8 @@ class DatabaseManager{
         firestore.collection("Materias").addDocument(data:["nombreMaestra":nombreMaestra, "nombreMateria":nombreMateria])
     }
     
-    func createEvento(titulo:String, descripcion:String){
-        firestore.collection("Eventos").addDocument(data:["titulo":titulo, "descripcion":descripcion])
+    func createEvento(titulo:String, descripcion:String, dia: Int){
+        firestore.collection("Eventos").addDocument(data:["titulo":titulo, "descripcion":descripcion, "dia": dia])
     }
     
     func createAviso(titulo:String, descripcion:String){
