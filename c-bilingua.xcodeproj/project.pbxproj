@@ -53,6 +53,7 @@
 		0F230D8125526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0F230D8225526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0F230D8325526DA80069F77F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		0F62E34F256796D0008F7CD5 /* InfoYContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F62E34E256796D0008F7CD5 /* InfoYContactoViewController.swift */; };
 		0F9C9D6225546CE30073CAA2 /* AvisosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */; };
 		0F9C9D6425546EE30073CAA2 /* Aviso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D6325546EE30073CAA2 /* Aviso.swift */; };
 		0F9C9D662554749D0073CAA2 /* AvisoCompletoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */; };
@@ -118,6 +119,7 @@
 		0F1A804A25524EC700CE25C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F1A805025524F6600CE25C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F230D7625526D340069F77F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F62E34E256796D0008F7CD5 /* InfoYContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoYContactoViewController.swift; sourceTree = "<group>"; };
 		0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisosViewController.swift; sourceTree = "<group>"; };
 		0F9C9D6325546EE30073CAA2 /* Aviso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aviso.swift; sourceTree = "<group>"; };
 		0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisoCompletoViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				0B7CE65625533076008D20B2 /* ViewController.swift */,
 				0B7CE65225533069008D20B2 /* RoundedImageView.swift */,
 				0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */,
+				0F62E34E256796D0008F7CD5 /* InfoYContactoViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				0B7CE65825533076008D20B2 /* ViewController.swift in Sources */,
 				0FAFBD982560EA7700C16209 /* CustomButton.swift in Sources */,
 				0B7157052553A7B100D88231 /* Alumno.swift in Sources */,
+				0F62E34F256796D0008F7CD5 /* InfoYContactoViewController.swift in Sources */,
 				0B8C3A5725663E0C00880BDC /* TVCGetMaterias.swift in Sources */,
 				0B2DFA412560D63B0092466C /* TableViewAlumnosDeUser.swift in Sources */,
 				C237174725671FA00061C4D2 /* EstadosViewController.swift in Sources */,
