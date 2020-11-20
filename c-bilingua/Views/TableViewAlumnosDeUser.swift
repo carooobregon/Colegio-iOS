@@ -8,6 +8,17 @@
 
 import UIKit
 
+class GetAlumnosCell : UITableViewCell {
+    @IBOutlet weak var lblFname: UILabel!
+    @IBOutlet weak var lblLname: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblGenero: UILabel!
+    @IBOutlet weak var lblGrado: UILabel!
+    @IBOutlet weak var lblNivel: UILabel!
+    
+}
+
+
 class TableViewAlumnosDeUser: UITableViewController {
     var listaAlumnos = [String]()
     var alumnosDeUser = [Alumno]()
@@ -33,6 +44,7 @@ class TableViewAlumnosDeUser: UITableViewController {
                     alumnos.filter({$0.id == l})
                 //print(self.alumnosDeUser)
             }
+            
             self.tableView.reloadData()
         }
     }
@@ -47,14 +59,32 @@ class TableViewAlumnosDeUser: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return alumnosDeUser.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
-       
-        celda.textLabel?.text = alumnosDeUser[indexPath.row].fName
-        celda.detailTextLabel?.text = alumnosDeUser[indexPath.row].id
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! GetAlumnosCell
         
+        var genero = ""
+        switch alumnosDeUser[indexPath.row].genero {
+        case true:
+            genero = "Masculino"
+        case false:
+            genero = "Femenino"
+        }
+        let grado = alumnosDeUser[indexPath.row].grado
+        
+        
+        celda.lblFname.text = alumnosDeUser[indexPath.row].fName
+        celda.lblLname.text = alumnosDeUser[indexPath.row].lName
+        celda.lblEmail.text = alumnosDeUser[indexPath.row].email
+        celda.lblGenero.text = genero
+        celda.lblGrado.text = String(grado)
+        celda.lblNivel.text = alumnosDeUser[indexPath.row].nivel
+
         return celda
     }
     
@@ -102,6 +132,8 @@ class TableViewAlumnosDeUser: UITableViewController {
         let indice = tableView.indexPathForSelectedRow!
         let vistaMaterias = segue.destination as! TableViewMaterias
         vistaMaterias.listaMaterias = alumnosDeUser[indice.row].materias
+      
+        vistaMaterias.listaCalifs = alumnosDeUser[indice.row].calificaciones
     }
     
 

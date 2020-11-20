@@ -19,15 +19,9 @@ class AlCalificacionesViewCell: UITableViewCell {
 class IntroCalificacionesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //DatabaseManager.shared.getAlumnos("dDG9eowRcs7KSNP3GaRh")
     @IBOutlet weak var tableView: UITableView!
-    
-   
-    
+       
     var listaAlumnos = [Alumno]()
-//        Alumno(fName: "Gaby Corona"),
-//        Alumno(nombre: "Caro Obregon"),
-//        Alumno(nombre: "Lucia Cantu")
-    //]
-//    @IBOutlet weak var tableView: UITableView!
+
     
     let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"];
     var selectedIndexPath: NSIndexPath = NSIndexPath()
@@ -38,18 +32,18 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
         self.navigationController!.isNavigationBarHidden = false;
         tableView.delegate = self
         tableView.dataSource = self
-       //getInfo()
+       getInfo()
         // Do any additional setup after loading the view.
     }
 //    override func viewDidDisappear(_ animated: Bool) {
 //        self.navigationController!.isNavigationBarHidden = false;
 //    }
-//    func getInfo(){
-//        DatabaseManager.shared.getAlumnos{ (alumnos) in
-//            self.listaAlumnos = alumnos
-//            self.tableView.reloadData()
-//        }
-//    }
+    func getInfo(){
+        DatabaseManager.shared.getAlumnos{ (alumnos) in
+            self.listaAlumnos = alumnos
+            self.tableView.reloadData()
+        }
+    }
 
 //    MARK: - Metodos de protocolo Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,6 +53,8 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! AlCalificacionesViewCell
         if(listaAlumnos[indexPath.row].genero){
+            celda.imagen.image = UIImage(named: "boypng")
+        }else{
             celda.imagen.image = UIImage(named: "girlpng")
         }
         celda.alNombre.text = listaAlumnos[indexPath.row].fName
@@ -81,9 +77,17 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if ("showCalif" == segue.identifier){
-            let indexPath = tableView.indexPathForSelectedRow
+            let indexPath = tableView.indexPathForSelectedRow!
             let vistaDetalle  = segue.destination as! CalificacionesViewController
-            vistaDetalle.currAlumno = listaAlumnos[indexPath!.row]
+            
+            vistaDetalle.fnAlumno = listaAlumnos[indexPath.row].fName
+            vistaDetalle.lnAlumno = listaAlumnos[indexPath.row].lName
+            vistaDetalle.gradoA = String (listaAlumnos[indexPath.row].grado)
+            vistaDetalle.nivelA = listaAlumnos[indexPath.row].nivel
+
+            
+            vistaDetalle.listaMaterias = listaAlumnos[indexPath.row].materias
+            
         }
     }
     

@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewMaterias: UITableViewController {
     var listaMaterias = [String]()
+    var listaCalifs = [String]()
     var materiasDeAlumno = [Materias]()
     
     override func viewDidLoad() {
@@ -18,13 +19,16 @@ class TableViewMaterias: UITableViewController {
         self.navigationController!.isNavigationBarHidden = false;
         self.title = "Materias"
         
+        
         getInfo()
+ 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+
     
     func getInfo(){
         DatabaseManager.shared.getMaterias{(materias) in
@@ -35,6 +39,9 @@ class TableViewMaterias: UITableViewController {
             }
             self.tableView.reloadData()
         }
+   
+        
+        
     }
 
     // MARK: - Table view data source
@@ -54,7 +61,7 @@ class TableViewMaterias: UITableViewController {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
         
         celda.textLabel?.text = materiasDeAlumno[indexPath.row].nombreMateria
-        celda.detailTextLabel?.text = materiasDeAlumno[indexPath.row].id
+        celda.detailTextLabel?.text = materiasDeAlumno[indexPath.row].nombreMaestra
         
 
         return celda
@@ -96,14 +103,18 @@ class TableViewMaterias: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let indice = tableView.indexPathForSelectedRow!
+        let vistaCalifs = segue.destination as! TVCCalificacionesdeAlumno
+        
+        vistaCalifs.idMateria = materiasDeAlumno[indice.row].id
+        vistaCalifs.nombreMateria = materiasDeAlumno[indice.row].nombreMateria
+        vistaCalifs.califsAlumno = listaCalifs
     }
-    */
+    
 
 }

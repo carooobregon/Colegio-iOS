@@ -1,46 +1,48 @@
 //
-//  TableViewControllerGetUsers.swift
+//  TVCCalificacionesdeAlumno.swift
 //  c-bilingua
 //
-//  Created by Gaby Corona on 11/5/20.
+//  Created by Gaby Corona on 11/19/20.
 //  Copyright © 2020 cbmt. All rights reserved.
 //
 
 import UIKit
 
-class customTableViewCell: UITableViewCell{
-    @IBOutlet weak var lblRol: UILabel!
-    @IBOutlet weak var lblFName: UILabel!
-    @IBOutlet weak var lblLName: UILabel!
-    @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var lblTelefono: UILabel!
-    @IBOutlet weak var lblDireccion: UILabel!
-    
-    
-}
+class TVCCalificacionesdeAlumno: UITableViewController {
 
-class TableViewControllerGetUsers: UITableViewController {
-
-    var listaUsers = [Usuario]()
+    var idMateria : String = ""
+    var nombreMateria : String = ""
+    var califsAlumno : [String] = []
+    
+    var calificacionesBD = [Calificacion]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getInfo()
         self.navigationController!.isNavigationBarHidden = false;
 
-        self.title = "Get Usuarios"
+        self.title = "Calificaciones de " + nombreMateria
+       
+        getInfo()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
     func getInfo(){
-        DatabaseManager.shared.getUsuarios{ (usuarios) in
-            self.listaUsers = usuarios
+        DatabaseManager.shared.getCalificaciones{ (calificaciones) in
+           // self.calificacionesBD = calificaciones
+            for c in calificaciones{
+                if(self.califsAlumno.contains(c.id) && c.idMateria == self.idMateria){
+                    self.calificacionesBD.append(c)
+                }
+            }
+            
             self.tableView.reloadData()
         }
-        
-        
     }
 
     // MARK: - Table view data source
@@ -52,36 +54,20 @@ class TableViewControllerGetUsers: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        return listaUsers.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return calificacionesBD.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! customTableViewCell
-        var rol = ""
-        switch listaUsers[indexPath.row].role {
-            case 0:
-                rol = "Admin"
-            case 1:
-                rol = "Maestro"
-            case 2:
-                rol = "Padre"
-            default:
-            break
-        }
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
+        //print( calificacionesBD[indexPath.row].mes)
+        celda.textLabel?.text = String(calificacionesBD[indexPath.row].calificacion)
+        celda.detailTextLabel?.text = calificacionesBD[indexPath.row].mes
         
-        celda.lblFName.text = listaUsers[indexPath.row].fName
-        celda.lblLName.text = listaUsers[indexPath.row].lName
-        celda.lblEmail.text = listaUsers[indexPath.row].email
-        celda.lblTelefono.text = listaUsers[indexPath.row].telefono
-        celda.lblDireccion.text = listaUsers[indexPath.row].direccion
-        celda.lblRol.text = rol
-        
+
+
+        // Configure the cell...
+
         return celda
     }
     
@@ -121,17 +107,14 @@ class TableViewControllerGetUsers: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indice = tableView.indexPathForSelectedRow!
-        let vistaAlumnos = segue.destination as! TableViewAlumnosDeUser
-        
-        vistaAlumnos.listaAlumnos = listaUsers[indice.row].alumnos
-     
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }

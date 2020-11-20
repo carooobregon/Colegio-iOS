@@ -60,6 +60,29 @@ class DatabaseManager{
         }
     }
     
+    func getCalificaciones(completion:@escaping([Calificacion])-> Void){
+        firestore.collection("Calificacion").getDocuments{( snapshot,error ) in
+ 
+            if( error == nil){
+                var calificaciones : [Calificacion] = []
+                for document in snapshot?.documents ?? []{
+                    var dict = document.data()
+                    dict["id"] = document.documentID
+                    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
+                    
+                    //print(dict)
+                    
+                    let calificacion = try? self.decoder.decode(Calificacion.self, from: data)
+                    calificaciones.append(calificacion ?? Calificacion())
+                }
+                completion(calificaciones)
+            }
+            else{
+                completion([])
+            }
+        }
+    }
+    
     func getMaterias(completion:@escaping([Materias])-> Void){
         firestore.collection("Materias").getDocuments{( snapshot,error ) in
             if( error == nil){
@@ -154,8 +177,8 @@ class DatabaseManager{
         firestore.collection("Usuarios").addDocument(data:["fName":fName, "lName":lName, "direccion":direccion, "email":email, "telefono":telefono, "role": role, "alumnos":alumnos ])
     }
    
-    func createAlumno(fName:String, lName:String, email:String, genero:Bool, grado:Int,  nivel:String, materias:[String]){
-        firestore.collection("Alumnos").addDocument(data:["fName":fName, "lName":lName, "email":email, "genero":genero, "grado": grado,"nivel":nivel, "materias":materias ])
+    func createAlumno(fName:String, lName:String, email:String, genero:Bool, grado:Int,  nivel:String, materias:[String], calificaciones:[String]){
+        firestore.collection("Alumnos").addDocument(data:["fName":fName, "lName":lName, "email":email, "genero":genero, "grado": grado,"nivel":nivel, "materias":materias, "calificaiones":calificaciones ])
     }
     
     func createMateria(nombreMaestra:String, nombreMateria:String){

@@ -45,7 +45,7 @@ class TVCGetMaterias: UITableViewController {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
         
         celda.textLabel?.text = materiasDB[indexPath.row].nombreMateria
-        celda.detailTextLabel?.text = materiasDB[indexPath.row].id
+        celda.detailTextLabel?.text = materiasDB[indexPath.row].nombreMaestra
         
 
         return celda

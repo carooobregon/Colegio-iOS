@@ -9,14 +9,15 @@
 import UIKit
 
 class AvisoCompletoViewController: UIViewController {
-    var currAviso : Aviso?
+    var tituloAviso : String = ""
+    var descripcionAviso : String = ""
     @IBOutlet weak var titulo: UILabel!
     @IBOutlet weak var body: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titulo.text = currAviso?.titulo
-        body.text = currAviso?.body
+        titulo.text = tituloAviso
+        body.text = descripcionAviso
         // Do any additional setup after loading the view.
     }
 

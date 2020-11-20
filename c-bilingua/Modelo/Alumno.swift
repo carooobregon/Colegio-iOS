@@ -17,6 +17,7 @@ class Alumno: Codable {
     var genero : Bool = false
     var nivel : String = ""
     
+    var calificaciones: [String] = [] 
     var materias : [String] = []
     
 }

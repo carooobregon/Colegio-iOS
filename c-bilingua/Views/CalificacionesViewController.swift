@@ -8,61 +8,74 @@
 import UIKit
 
 class MateriaViewCell: UITableViewCell {
-    
-    
     @IBOutlet weak var materia: UILabel!
     @IBOutlet weak var califAgo: UILabel!
     @IBOutlet weak var califSep: UILabel!
     @IBOutlet weak var califOct: UILabel!
+    @IBOutlet weak var lblnombreMaestra: UILabel!
     
 }
 
-class FakeCalificacion: NSObject {
-    let materia : String
-    var nota : [Int] = []
-    
-    init(materia: String, nota: [Int]) {
-        self.materia = materia
-        self.nota.append(contentsOf: nota)
-    }
-    
-}
+
 
 class CalificacionesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // TODO: agregar back buttons y arreglar promedio general
     @IBOutlet weak var promedioView: UIView!
-    var currAlumno : Alumno?
     @IBOutlet weak var promedioAlumno: UILabel!
     @IBOutlet weak var nombreAlumno: UILabel!
     @IBOutlet weak var gradoAlumno: UILabel!
     @IBOutlet weak var maestra: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var listaMaterias : [String] = []
+    var materiasDeAlumno = [Materias]()
+    var fnAlumno : String = ""
+    var lnAlumno : String = ""
+    var gradoA : String = ""
+    var nivelA : String = ""
     
     let styleHelper = StyleHelperLib()
     
     let cellColors = ["222B45","AC4040","FFC700", "11A05B", "FFB110"]
-    let boleta = [FakeCalificacion(materia: "Matematicas", nota: [100,94,98]),FakeCalificacion(materia: "Matematicas", nota: [100,94,98]), FakeCalificacion(materia: "Matematicas", nota: [100,94,98])]
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
-        nombreAlumno.text = currAlumno!.fName + currAlumno!.lName
+        getInfo()
+        nombreAlumno.text = fnAlumno + lnAlumno
         gradoAlumno.text = buildGrade()
         maestra.text = buildMaestra()
         promedioAlumno.text = String(93)
     }
+    // MARK: - Table view data source
 
+    func getInfo(){
+        DatabaseManager.shared.getMaterias{(materias) in
+            for m in materias{
+                if(self.listaMaterias.contains(m.id)){
+                    self.materiasDeAlumno.append(m)
+                }
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return boleta.count
+        return materiasDeAlumno.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! MateriaViewCell
-        let currBoleta = boleta
-
-        celda.materia.text = currBoleta[indexPath.row].materia
-        celda.califAgo.text = String(currBoleta[indexPath.row].nota[0])
-        celda.califSep.text = String(currBoleta[indexPath.row].nota[1])
-        celda.califOct.text = String(currBoleta[indexPath.row].nota[2])
+        
+        celda.materia.text = materiasDeAlumno[indexPath.row].nombreMateria
+        celda.lblnombreMaestra.text = materiasDeAlumno[indexPath.row].nombreMaestra
+//        celda.califAgo.text = String(currBoleta[indexPath.row].nota[0])
+//        celda.califSep.text = String(currBoleta[indexPath.row].nota[1])
+//        celda.califOct.text = String(currBoleta[indexPath.row].nota[2])
 //        celda.promedio.text = calculateAverage(agosto: currBoleta[indexPath.row].nota[0], sept: currBoleta[indexPath.row].nota[1], oct: currBoleta[indexPath.row].nota[2])
         celda.contentView.backgroundColor = styleHelper.hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
@@ -74,7 +87,7 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func buildGrade() -> String{
-        return String(currAlumno!.grado) + " de " + currAlumno!.nivel
+        return String(gradoA) + " de " + nivelA
     }
     
     func buildMaestra() -> String{
