@@ -65,6 +65,8 @@
 		0FE28B9C25548BFA006DF48E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0FE28B9F25548CAC006DF48E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C237174725671FA00061C4D2 /* EstadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C237174625671FA00061C4D2 /* EstadosViewController.swift */; };
+		C26C1EA7256745DD003EC642 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C1EA6256745DD003EC642 /* CalendarViewController.swift */; };
+		C26C1EAA256748A2003EC642 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C1EA9256748A2003EC642 /* Evento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +126,8 @@
 		A65D78D39C3FF466440177B7 /* Pods-c-bilingua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c-bilingua.debug.xcconfig"; path = "Target Support Files/Pods-c-bilingua/Pods-c-bilingua.debug.xcconfig"; sourceTree = "<group>"; };
 		C237174625671FA00061C4D2 /* EstadosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadosViewController.swift; sourceTree = "<group>"; };
 		C259EEFE255483660003466B /* EstadoCuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoCuentaViewController.swift; sourceTree = "<group>"; };
+		C26C1EA6256745DD003EC642 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C26C1EA9256748A2003EC642 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,8 @@
 				0B71570B2553A95C00D88231 /* Views */,
 				0F1A803E25524EC500CE25C3 /* SceneDelegate.swift */,
 				0F230D7525526D340069F77F /* Main.storyboard */,
+				C26C1EA9256748A2003EC642 /* Evento.swift */,
+				C26C1EA6256745DD003EC642 /* CalendarViewController.swift */,
 				0FCA74212560C62A0018250B /* ForgotPasswordViewController.swift */,
 				0FAFBD972560EA7700C16209 /* CustomButton.swift */,
 				C259EEFE255483660003466B /* EstadoCuentaViewController.swift */,
@@ -412,6 +418,7 @@
 				0B7CE67025533319008D20B2 /* EstadoDeCuenta.swift in Sources */,
 				0B7CE64825533042008D20B2 /* IntroCalificacionesViewController.swift in Sources */,
 				0F230D8025526DA80069F77F /* (null) in Sources */,
+				C26C1EA7256745DD003EC642 /* CalendarViewController.swift in Sources */,
 				0B8C3A5A25663E2000880BDC /* TVCGetAlumnos.swift in Sources */,
 				0F230D8125526DA80069F77F /* (null) in Sources */,
 				0B8C3A512566382C00880BDC /* VCAddEvento.swift in Sources */,
@@ -428,6 +435,7 @@
 				0B7CE67525533319008D20B2 /* CuotaPendiente.swift in Sources */,
 				0FA4D883256657860022C284 /* StyleHelperLib.swift in Sources */,
 				0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */,
+				C26C1EAA256748A2003EC642 /* Evento.swift in Sources */,
 				0F1A803F25524EC500CE25C3 /* SceneDelegate.swift in Sources */,
 				0B7CE66F25533319008D20B2 /* Calificacion.swift in Sources */,
 				0B7CE65325533069008D20B2 /* RoundedImageView.swift in Sources */,
