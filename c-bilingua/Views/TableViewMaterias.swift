@@ -54,7 +54,7 @@ class TableViewMaterias: UITableViewController {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
         
         celda.textLabel?.text = materiasDeAlumno[indexPath.row].nombreMateria
-        celda.detailTextLabel?.text = materiasDeAlumno[indexPath.row].id
+        celda.detailTextLabel?.text = materiasDeAlumno[indexPath.row].nombreMaestra
         
 
         return celda
