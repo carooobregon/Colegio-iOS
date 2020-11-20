@@ -106,10 +106,9 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! MateriaViewCell
         
-        celda.materia.text = materiasDeAlumno[indexPath.row].nombreMateria
-        celda.lblnombreMaestra.text = materiasDeAlumno[indexPath.row].nombreMaestra
-        
+        celda.materia.text = materiasDeAlumno[indexPath.row].nombreMateria    
         celda.lblProm.text = String(promedios[indexPath.row])
+        celda.lblnombreMaestra.text = buildProf(prof: materiasDeAlumno[indexPath.row].nombreMaestra)
         celda.contentView.backgroundColor = styleHelper.hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
@@ -123,6 +122,9 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         return String(gradoA) + " de " + nivelA
     }
     
+    func buildProf(prof: String) -> String{
+        return "Profesor " + prof
+    }
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation

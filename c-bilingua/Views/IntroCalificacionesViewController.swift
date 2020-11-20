@@ -12,7 +12,6 @@ class AlCalificacionesViewCell: UITableViewCell {
     @IBOutlet weak var imagen: UIImageView!
     @IBOutlet weak var alNombre: UILabel!
     @IBOutlet weak var alGrado: UILabel!
-    @IBOutlet weak var alMaestra: UILabel!
     
 }
 

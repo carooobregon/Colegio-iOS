@@ -61,9 +61,9 @@ class TVCCalificacionesUser: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
         //print( calificacionesBD[indexPath.row].mes)
-        celda.textLabel?.text = String(calificacionesBD[indexPath.row].calificacion)
-        celda.detailTextLabel?.text = calificacionesBD[indexPath.row].mes
-    
+        celda.textLabel?.text = calificacionesBD[indexPath.row].mes
+        celda.detailTextLabel?.text = String(calificacionesBD[indexPath.row].calificacion)
+
 
         return celda
     }
