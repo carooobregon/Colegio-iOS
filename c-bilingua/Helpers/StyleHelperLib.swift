@@ -9,7 +9,9 @@
 import UIKit
 
 class StyleHelperLib: NSObject {
-
+    
+    let cbmt_blue =  UIColor(named: "222B45")
+    
     override init() {
         
     }
@@ -74,4 +76,11 @@ class StyleHelperLib: NSObject {
         btn.titleLabel?.font = myFont
         btn.titleLabel?.textColor = myColor
     }
+    
+    func addFontStyleToTitle(lb: UILabel, myColor: UIColor){
+        lb.numberOfLines = 0
+        lb.font = UIFont(name: "Gilroy-Bold", size: 38.0)
+        lb.textColor = myColor
+    }
+    
 }

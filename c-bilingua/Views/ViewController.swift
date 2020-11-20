@@ -50,6 +50,11 @@ class ViewController: UIViewController {
 //        loginBtn.changeColor(newColor: styleHelper.hexStringToCGColor(hex: "22215B"))
     }
 
+    func styleLabels(){
+        
+    }
+    
+    
     @IBAction func ingresarAction(_ sender: Any) {
         if self.txtUsuario.text == "" || self.txtContrasena.text == "" {
             
@@ -115,6 +120,7 @@ class ViewController: UIViewController {
         }
 
     }
+    
     
 }
 
