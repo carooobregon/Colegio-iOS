@@ -9,9 +9,6 @@ import UIKit
 
 class MateriaViewCell: UITableViewCell {
     @IBOutlet weak var materia: UILabel!
-    @IBOutlet weak var califAgo: UILabel!
-    @IBOutlet weak var califSep: UILabel!
-    @IBOutlet weak var califOct: UILabel!
     @IBOutlet weak var lblnombreMaestra: UILabel!
     
 }
@@ -93,11 +90,7 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! MateriaViewCell
         
         celda.materia.text = materiasDeAlumno[indexPath.row].nombreMateria
-        celda.lblnombreMaestra.text = materiasDeAlumno[indexPath.row].nombreMaestra
-//        celda.califAgo.text = String(currBoleta[indexPath.row].nota[0])
-//        celda.califSep.text = String(currBoleta[indexPath.row].nota[1])
-//        celda.califOct.text = String(currBoleta[indexPath.row].nota[2])
-//        celda.promedio.text = calculateAverage(agosto: currBoleta[indexPath.row].nota[0], sept: currBoleta[indexPath.row].nota[1], oct: currBoleta[indexPath.row].nota[2])
+        celda.lblnombreMaestra.text = buildProf(prof: materiasDeAlumno[indexPath.row].nombreMaestra)
         celda.contentView.backgroundColor = styleHelper.hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
@@ -111,6 +104,9 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         return String(gradoA) + " de " + nivelA
     }
     
+    func buildProf(prof: String) -> String{
+        return "Profesor " + prof
+    }
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
