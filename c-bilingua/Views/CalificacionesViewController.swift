@@ -9,10 +9,8 @@ import UIKit
 
 class MateriaViewCell: UITableViewCell {
     @IBOutlet weak var materia: UILabel!
-    @IBOutlet weak var califAgo: UILabel!
-    @IBOutlet weak var califSep: UILabel!
-    @IBOutlet weak var califOct: UILabel!
     @IBOutlet weak var lblnombreMaestra: UILabel!
+    @IBOutlet weak var lblProm: UILabel!
     
 }
 
@@ -30,8 +28,10 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
     
     var listaCalifs = [String]()
     var listaMaterias : [String] = []
+    var promedios : [Double] = []
     var materiasDeAlumno = [Materias]()
     var calificacionesBD = [Calificacion]()
+    
     
     var fnAlumno : String = ""
     var lnAlumno : String = ""
@@ -49,9 +49,9 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
         getInfo()
+        //getPromedio()
         
-        getPromedio()
-        nombreAlumno.text = fnAlumno + lnAlumno
+        nombreAlumno.text = fnAlumno + "  " + lnAlumno
         gradoAlumno.text = buildGrade()
         
         promedioAlumno.text = String(93)
@@ -60,16 +60,14 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
 
     func getPromedio(){
         DatabaseManager.shared.getCalificaciones{ (calificaciones) in
-           
             for c in calificaciones{
                 if(self.listaCalifs.contains(c.id)){
                     self.calificacionesBD.append(c)
                 }
             }
             
-            self.tableView.reloadData()
         }
-
+        self.tableView.reloadData()
     }
     
     func getInfo(){
@@ -81,23 +79,37 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
             }
             self.tableView.reloadData()
         }
+        getPromedio()
     }
     
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        populateProm()
         return materiasDeAlumno.count
     }
-    
+    func populateProm(){
+        var promedio = 0.0
+        var cont = 0
+        for m in materiasDeAlumno{
+            for c in calificacionesBD{
+                if(m.id == c.idMateria){
+                    promedio += c.calificacion
+                    cont += 1
+                }
+            }
+            promedios.append(promedio/Double(cont))
+            promedio = 0
+            cont = 0
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! MateriaViewCell
         
         celda.materia.text = materiasDeAlumno[indexPath.row].nombreMateria
         celda.lblnombreMaestra.text = materiasDeAlumno[indexPath.row].nombreMaestra
-//        celda.califAgo.text = String(currBoleta[indexPath.row].nota[0])
-//        celda.califSep.text = String(currBoleta[indexPath.row].nota[1])
-//        celda.califOct.text = String(currBoleta[indexPath.row].nota[2])
-//        celda.promedio.text = calculateAverage(agosto: currBoleta[indexPath.row].nota[0], sept: currBoleta[indexPath.row].nota[1], oct: currBoleta[indexPath.row].nota[2])
+        
+        celda.lblProm.text = String(promedios[indexPath.row])
         celda.contentView.backgroundColor = styleHelper.hexStringToUIColor(hex: cellColors[indexPath.row % cellColors.count])
 
         return celda
