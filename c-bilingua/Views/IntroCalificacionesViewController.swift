@@ -41,9 +41,9 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
         getInfo()
         // Do any additional setup after loading the view.
     }
-    override func viewDidDisappear(_ animated: Bool) {
-        self.navigationController!.isNavigationBarHidden = false;
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        self.navigationController!.isNavigationBarHidden = false;
+//    }
     func getInfo(){
         DatabaseManager.shared.getAlumnos{ (alumnos) in
             self.listaAlumnos = alumnos
