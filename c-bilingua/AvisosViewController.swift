@@ -16,6 +16,7 @@ class AvisosViewCell: UITableViewCell {
     
 }
 class AvisosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var megaphonePic: UIImageView!
     
     @IBOutlet weak var tableView: UITableView!
     var avisosDB = [Avisos]()
@@ -23,6 +24,7 @@ class AvisosViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
         getInfo()
+
         // Do any additional setup after loading the view.
     }
     
