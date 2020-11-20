@@ -243,7 +243,7 @@
                                     <fragment content="¡Bienvenido!">
                                         <attributes>
                                             <color key="NSColor" red="0.13643854859999999" green="0.12043768909999999" blue="0.35688322779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" metaFont="system" size="38"/>
+                                            <font key="NSFont" size="38" name="Gilroy-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1305,6 +1305,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="oxK-iU-IQr" kind="show" id="zOW-Sf-S9C"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1317,6 +1320,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opk-UX-oYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-590" y="2588"/>
+        </scene>
+        <!--Calificacionesde Alumno-->
+        <scene sceneID="WgW-R2-He7">
+            <objects>
+                <tableViewController id="oxK-iU-IQr" customClass="TVCCalificacionesdeAlumno" customModule="c_bilingua" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ucj-Tj-GjU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" textLabel="faV-vC-bzS" detailTextLabel="ac1-LF-ze5" style="IBUITableViewCellStyleSubtitle" id="bG6-tV-HvL">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bG6-tV-HvL" id="TAa-iI-N4Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="faV-vC-bzS">
+                                            <rect key="frame" x="16" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ac1-LF-ze5">
+                                            <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oxK-iU-IQr" id="IsA-wE-tdK"/>
+                            <outlet property="delegate" destination="oxK-iU-IQr" id="UNO-4C-VRd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Bwd-uZ-j6d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOC-TF-SSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="3441"/>
         </scene>
         <!--View Controller Add User-->
         <scene sceneID="KS7-xd-bl2">
@@ -2140,7 +2188,7 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="j0p-jV-UjS"/>
+        <segue reference="2AV-yV-NEt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="girlpng" width="1274" height="1340"/>

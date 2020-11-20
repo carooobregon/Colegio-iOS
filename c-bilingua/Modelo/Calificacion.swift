@@ -8,19 +8,11 @@
 
 import UIKit
 
-class Calificacion: NSObject {
-    var id : Int
-    var fecha : NSDate
-    var calificacion : Double
-    var faltas : Int
-    var retardos : Int
-    
-    override init() {
-        self.id = 1
-        self.fecha = NSDate.init()
-        self.calificacion = 92.3
-        self.faltas = 0
-        self.retardos = 4
-    }
-
+class Calificacion: Codable {
+    var id : String = ""
+    var mes : String = ""
+    var calificacion : Double = 0.0
+    var faltas : Int = 0
+    var retardos : Int = 0
+    var idMateria : String = ""
 }

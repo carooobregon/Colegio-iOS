@@ -1,28 +1,29 @@
 //
-//  TVCGetAlumnos.swift
+//  TVCCalificacionesdeAlumno.swift
 //  c-bilingua
 //
-//  Created by Gaby Corona on 11/18/20.
+//  Created by Gaby Corona on 11/19/20.
 //  Copyright © 2020 cbmt. All rights reserved.
 //
 
 import UIKit
-class GetAlumnosNormal: UITableViewCell{
-    @IBOutlet weak var lblFname: UILabel!
-    @IBOutlet weak var lblLname: UILabel!
-    @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var lblGenero: UILabel!
-    @IBOutlet weak var lblGrado: UILabel!
-    @IBOutlet weak var lblNivel: UILabel!
-    
-}
 
-class TVCGetAlumnos: UITableViewController {
-    var alumnosDB = [Alumno]()
+class TVCCalificacionesdeAlumno: UITableViewController {
+
+    var idMateria : String = ""
+    var nombreMateria : String = ""
+    var califsAlumno : [String] = []
+    
+    var califsdeAlumno = [Calificacion]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Get Alumnos"
+        self.navigationController!.isNavigationBarHidden = false;
+
+        self.title = "Calificaciones de " + nombreMateria
+        for c in califsAlumno{
+            print(c)
+        }
         getInfo()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,9 +32,15 @@ class TVCGetAlumnos: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    
     func getInfo(){
-        DatabaseManager.shared.getAlumnos{ (alumnos) in
-            self.alumnosDB = alumnos
+        DatabaseManager.shared.getCalificaciones{ (calificaciones) in
+//            for l in self.califsAlumno{
+//                self.califsdeAlumno =
+//                    calificaciones.filter({$0.id == l})
+//                //print(self.alumnosDeUser)
+//            }
+            self.califsdeAlumno = calificaciones
             self.tableView.reloadData()
         }
     }
@@ -47,34 +54,20 @@ class TVCGetAlumnos: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return alumnosDB.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return califsdeAlumno.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! GetAlumnosNormal
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
+        print( califsdeAlumno.count)
+        celda.textLabel?.text = String(califsdeAlumno[indexPath.row].calificacion)
+        celda.detailTextLabel?.text = califsdeAlumno[indexPath.row].mes
         
-        var genero = ""
-        switch alumnosDB[indexPath.row].genero {
-        case true:
-            genero = "Masculino"
-        case false:
-            genero = "Femenino"
-        }
-        let grado = alumnosDB[indexPath.row].grado
-        
-        
-        celda.lblFname.text = alumnosDB[indexPath.row].fName
-        celda.lblLname.text = alumnosDB[indexPath.row].lName
-        celda.lblEmail.text = alumnosDB[indexPath.row].email
-        celda.lblGenero.text = genero
-        celda.lblGrado.text = String(grado)
-        celda.lblNivel.text = alumnosDB[indexPath.row].nivel
-        
+
+
+        // Configure the cell...
+
         return celda
     }
     
@@ -114,16 +107,14 @@ class TVCGetAlumnos: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indice = tableView.indexPathForSelectedRow!
-        let vistaMaterias = segue.destination as! TableViewMaterias
-        vistaMaterias.listaMaterias = alumnosDB[indice.row].materias
-        vistaMaterias.listaCalifs = alumnosDB[indice.row].calificaciones
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }

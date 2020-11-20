@@ -44,6 +44,7 @@ class TableViewAlumnosDeUser: UITableViewController {
                     alumnos.filter({$0.id == l})
                 //print(self.alumnosDeUser)
             }
+            
             self.tableView.reloadData()
         }
     }
@@ -131,6 +132,8 @@ class TableViewAlumnosDeUser: UITableViewController {
         let indice = tableView.indexPathForSelectedRow!
         let vistaMaterias = segue.destination as! TableViewMaterias
         vistaMaterias.listaMaterias = alumnosDeUser[indice.row].materias
+      
+        vistaMaterias.listaCalifs = alumnosDeUser[indice.row].calificaciones
     }
     
 
