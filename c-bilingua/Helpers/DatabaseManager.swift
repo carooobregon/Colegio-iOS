@@ -61,15 +61,17 @@ class DatabaseManager{
     }
     
     func getCalificaciones(completion:@escaping([Calificacion])-> Void){
-        firestore.collection("Calificaciones").getDocuments{( snapshot,error ) in
+        firestore.collection("Calificacion").getDocuments{( snapshot,error ) in
+ 
             if( error == nil){
                 var calificaciones : [Calificacion] = []
                 for document in snapshot?.documents ?? []{
                     var dict = document.data()
                     dict["id"] = document.documentID
                     guard let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {return}
-                    print("hola")
-                    print(dict)
+                    
+                    //print(dict)
+                    
                     let calificacion = try? self.decoder.decode(Calificacion.self, from: data)
                     calificaciones.append(calificacion ?? Calificacion())
                 }

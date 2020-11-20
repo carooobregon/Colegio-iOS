@@ -14,17 +14,16 @@ class TVCCalificacionesdeAlumno: UITableViewController {
     var nombreMateria : String = ""
     var califsAlumno : [String] = []
     
-    var califsdeAlumno = [Calificacion]()
+    var calificacionesBD = [Calificacion]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
 
         self.title = "Calificaciones de " + nombreMateria
-        for c in califsAlumno{
-            print(c)
-        }
+       
         getInfo()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,12 +34,13 @@ class TVCCalificacionesdeAlumno: UITableViewController {
     
     func getInfo(){
         DatabaseManager.shared.getCalificaciones{ (calificaciones) in
-//            for l in self.califsAlumno{
-//                self.califsdeAlumno =
-//                    calificaciones.filter({$0.id == l})
-//                //print(self.alumnosDeUser)
-//            }
-            self.califsdeAlumno = calificaciones
+           // self.calificacionesBD = calificaciones
+            for c in calificaciones{
+                if(self.califsAlumno.contains(c.id) && c.idMateria == self.idMateria){
+                    self.calificacionesBD.append(c)
+                }
+            }
+            
             self.tableView.reloadData()
         }
     }
@@ -54,15 +54,15 @@ class TVCCalificacionesdeAlumno: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return califsdeAlumno.count
+        return calificacionesBD.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
-        print( califsdeAlumno.count)
-        celda.textLabel?.text = String(califsdeAlumno[indexPath.row].calificacion)
-        celda.detailTextLabel?.text = califsdeAlumno[indexPath.row].mes
+        //print( calificacionesBD[indexPath.row].mes)
+        celda.textLabel?.text = String(calificacionesBD[indexPath.row].calificacion)
+        celda.detailTextLabel?.text = calificacionesBD[indexPath.row].mes
         
 
 
