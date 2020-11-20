@@ -16,19 +16,21 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-    var listaEventos = [
-        Evento(evento: "No hay clase", dia: "16 -"),
-        Evento(evento: "Posada navidad", dia: "28 -"),
-        Evento(evento: "Entrega de calificaciones", dia: "30 -")
-    ]
+    var listaEventos = [Eventos]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
-
+        getInfo()
         // Do any additional setup after loading the view.
     }
     
+    func getInfo(){
+        DatabaseManager.shared.getEventos{(eventos) in
+            self.listaEventos = eventos
+            self.tableView.reloadData()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listaEventos.count
@@ -36,8 +38,9 @@ class CalendarViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda") as! EventoViewCell
-        cell.lbDia.text = listaEventos[indexPath.row].dia
-        cell.lbEvento.text = listaEventos[indexPath.row].evento
+        print(listaEventos.count)
+        cell.lbDia.text = String(listaEventos[indexPath.row].dia)
+        cell.lbEvento.text = listaEventos[indexPath.row].titulo
         return cell
     }
 

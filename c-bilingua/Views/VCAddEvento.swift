@@ -10,6 +10,7 @@ import UIKit
 
 class VCAddEvento: UIViewController {
 
+    @IBOutlet weak var tfdia: UITextField!
     @IBOutlet weak var tfDesc: UITextField!
     @IBOutlet weak var tfTitulo: UITextField!
     override func viewDidLoad() {
@@ -20,7 +21,7 @@ class VCAddEvento: UIViewController {
     }
     
     @IBAction func addEvento(_ sender: Any) {
-        DatabaseManager.shared.createEvento(titulo: tfTitulo.text!, descripcion: tfDesc.text!)
+        DatabaseManager.shared.createEvento(titulo: tfTitulo.text!, descripcion: tfDesc.text!, dia: Int(tfdia.text!)!)
        
         let alert = UIAlertController(title: "Evento Agregado", message: "Evento Agregado Correctamente.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
