@@ -103,14 +103,18 @@ class TVCAddAlumnosAUser: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let indice = tableView.indexPathForSelectedRow!
+        let vistaAlumnos = segue.destination as! TVCSelectAlumnotoAdd
+        
+        vistaAlumnos.nombreUser = listaUsers[indice.row].fName + " " + listaUsers[indice.row].lName
+        vistaAlumnos.idUser = listaUsers[indice.row].id
+        vistaAlumnos.alumnosActuales = listaUsers[indice.row].alumnos
     }
-    */
+    
 
 }

@@ -15,6 +15,9 @@
 		0B2E571E2553CEA60051C732 /* TableViewControllerGetUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */; };
 		0B4AC71025660F15008E35B2 /* TableViewMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AC70F25660F15008E35B2 /* TableViewMaterias.swift */; };
 		0B5F2CD225678AD000888111 /* TVCAddAlumnosAUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F2CD125678AD000888111 /* TVCAddAlumnosAUser.swift */; };
+		0B5F2CD525678FBE00888111 /* TVCSelectAlumnotoAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F2CD425678FBE00888111 /* TVCSelectAlumnotoAdd.swift */; };
+		0B5F2CD82567969700888111 /* TVCAddMateriasAAlumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F2CD72567969700888111 /* TVCAddMateriasAAlumno.swift */; };
+		0B5F2CDB2567999500888111 /* TVCSelectMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F2CDA2567999500888111 /* TVCSelectMaterias.swift */; };
 		0B7157052553A7B100D88231 /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157042553A7B100D88231 /* Alumno.swift */; };
 		0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */; };
 		0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */; };
@@ -80,6 +83,9 @@
 		0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerGetUsers.swift; sourceTree = "<group>"; };
 		0B4AC70F25660F15008E35B2 /* TableViewMaterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMaterias.swift; sourceTree = "<group>"; };
 		0B5F2CD125678AD000888111 /* TVCAddAlumnosAUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCAddAlumnosAUser.swift; sourceTree = "<group>"; };
+		0B5F2CD425678FBE00888111 /* TVCSelectAlumnotoAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCSelectAlumnotoAdd.swift; sourceTree = "<group>"; };
+		0B5F2CD72567969700888111 /* TVCAddMateriasAAlumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCAddMateriasAAlumno.swift; sourceTree = "<group>"; };
+		0B5F2CDA2567999500888111 /* TVCSelectMaterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCSelectMaterias.swift; sourceTree = "<group>"; };
 		0B7157042553A7B100D88231 /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
 		0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdmin.swift; sourceTree = "<group>"; };
 		0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddUser.swift; sourceTree = "<group>"; };
@@ -155,13 +161,16 @@
 				0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */,
 				0B8C3A502566382C00880BDC /* VCAddEvento.swift */,
 				0B8C3A5625663E0C00880BDC /* TVCGetMaterias.swift */,
+				0B5F2CD72567969700888111 /* TVCAddMateriasAAlumno.swift */,
 				0B0C057325664F8D00C6226D /* TVCGetAvisos.swift */,
+				0B5F2CDA2567999500888111 /* TVCSelectMaterias.swift */,
 				0B0C057625664F9D00C6226D /* TVCGetEventos.swift */,
 				0BF49B8A256775CD001F7904 /* TVCCalificacionesUser.swift */,
 				0B28888625674AEB00FD35BE /* TVCCalificacionesdeAlumno.swift */,
 				0B5F2CD125678AD000888111 /* TVCAddAlumnosAUser.swift */,
 				0B8C3A532566383F00880BDC /* VCAddAviso.swift */,
 				0B8C3A4A25661EDA00880BDC /* VCAddMateria.swift */,
+				0B5F2CD425678FBE00888111 /* TVCSelectAlumnotoAdd.swift */,
 				0B4AC70F25660F15008E35B2 /* TableViewMaterias.swift */,
 				0B8C3A5925663E2000880BDC /* TVCGetAlumnos.swift */,
 				0B2DFA402560D63B0092466C /* TableViewAlumnosDeUser.swift */,
@@ -429,6 +438,7 @@
 				0F230D8025526DA80069F77F /* (null) in Sources */,
 				0BF49B8B256775CD001F7904 /* TVCCalificacionesUser.swift in Sources */,
 				C26C1EA7256745DD003EC642 /* CalendarViewController.swift in Sources */,
+				0B5F2CDB2567999500888111 /* TVCSelectMaterias.swift in Sources */,
 				0B8C3A5A25663E2000880BDC /* TVCGetAlumnos.swift in Sources */,
 				0F230D8125526DA80069F77F /* (null) in Sources */,
 				0B8C3A512566382C00880BDC /* VCAddEvento.swift in Sources */,
@@ -438,6 +448,7 @@
 				0F230D7F25526DA80069F77F /* (null) in Sources */,
 				0F9C9D6425546EE30073CAA2 /* Aviso.swift in Sources */,
 				0B8C3A4E25662AF000880BDC /* VCAddAlumno.swift in Sources */,
+				0B5F2CD525678FBE00888111 /* TVCSelectAlumnotoAdd.swift in Sources */,
 				0F230D8225526DA80069F77F /* (null) in Sources */,
 				0F1A803D25524EC500CE25C3 /* AppDelegate.swift in Sources */,
 				0B0C057425664F8D00C6226D /* TVCGetAvisos.swift in Sources */,
@@ -454,6 +465,7 @@
 				0B7CE67625533319008D20B2 /* Usuario.swift in Sources */,
 				0FE28B9C25548BFA006DF48E /* (null) in Sources */,
 				0FCA74222560C62A0018250B /* ForgotPasswordViewController.swift in Sources */,
+				0B5F2CD82567969700888111 /* TVCAddMateriasAAlumno.swift in Sources */,
 				0B7CE65D255332E5008D20B2 /* DatabaseManager.swift in Sources */,
 				0B7CE67325533319008D20B2 /* Eventos.swift in Sources */,
 				0B8C3A4B25661EDA00880BDC /* VCAddMateria.swift in Sources */,
