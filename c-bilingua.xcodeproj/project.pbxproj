@@ -14,6 +14,7 @@
 		0B2DFA412560D63B0092466C /* TableViewAlumnosDeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DFA402560D63B0092466C /* TableViewAlumnosDeUser.swift */; };
 		0B2E571E2553CEA60051C732 /* TableViewControllerGetUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */; };
 		0B4AC71025660F15008E35B2 /* TableViewMaterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AC70F25660F15008E35B2 /* TableViewMaterias.swift */; };
+		0B5F2CD225678AD000888111 /* TVCAddAlumnosAUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F2CD125678AD000888111 /* TVCAddAlumnosAUser.swift */; };
 		0B7157052553A7B100D88231 /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157042553A7B100D88231 /* Alumno.swift */; };
 		0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */; };
 		0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */; };
@@ -78,6 +79,7 @@
 		0B2DFA402560D63B0092466C /* TableViewAlumnosDeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAlumnosDeUser.swift; sourceTree = "<group>"; };
 		0B2E571D2553CEA60051C732 /* TableViewControllerGetUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerGetUsers.swift; sourceTree = "<group>"; };
 		0B4AC70F25660F15008E35B2 /* TableViewMaterias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMaterias.swift; sourceTree = "<group>"; };
+		0B5F2CD125678AD000888111 /* TVCAddAlumnosAUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCAddAlumnosAUser.swift; sourceTree = "<group>"; };
 		0B7157042553A7B100D88231 /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
 		0B7157082553A8E800D88231 /* ViewControllerAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdmin.swift; sourceTree = "<group>"; };
 		0B71570F2553A99D00D88231 /* ViewControllerAddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddUser.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				0B0C057625664F9D00C6226D /* TVCGetEventos.swift */,
 				0BF49B8A256775CD001F7904 /* TVCCalificacionesUser.swift */,
 				0B28888625674AEB00FD35BE /* TVCCalificacionesdeAlumno.swift */,
+				0B5F2CD125678AD000888111 /* TVCAddAlumnosAUser.swift */,
 				0B8C3A532566383F00880BDC /* VCAddAviso.swift */,
 				0B8C3A4A25661EDA00880BDC /* VCAddMateria.swift */,
 				0B4AC70F25660F15008E35B2 /* TableViewMaterias.swift */,
@@ -430,6 +433,7 @@
 				0F230D8125526DA80069F77F /* (null) in Sources */,
 				0B8C3A512566382C00880BDC /* VCAddEvento.swift in Sources */,
 				0F230D8325526DA80069F77F /* (null) in Sources */,
+				0B5F2CD225678AD000888111 /* TVCAddAlumnosAUser.swift in Sources */,
 				0B4AC71025660F15008E35B2 /* TableViewMaterias.swift in Sources */,
 				0F230D7F25526DA80069F77F /* (null) in Sources */,
 				0F9C9D6425546EE30073CAA2 /* Aviso.swift in Sources */,
