@@ -25,15 +25,20 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var promedioAlumno: UILabel!
     @IBOutlet weak var nombreAlumno: UILabel!
     @IBOutlet weak var gradoAlumno: UILabel!
-    @IBOutlet weak var maestra: UILabel!
+    
     @IBOutlet weak var tableView: UITableView!
     
+    var listaCalifs = [String]()
     var listaMaterias : [String] = []
     var materiasDeAlumno = [Materias]()
+    var calificacionesBD = [Calificacion]()
+    
     var fnAlumno : String = ""
     var lnAlumno : String = ""
     var gradoA : String = ""
     var nivelA : String = ""
+    
+    var promedio : Double = 0.0
     
     let styleHelper = StyleHelperLib()
     
@@ -44,13 +49,29 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = false;
         getInfo()
+        
+        getPromedio()
         nombreAlumno.text = fnAlumno + lnAlumno
         gradoAlumno.text = buildGrade()
-        maestra.text = buildMaestra()
+        
         promedioAlumno.text = String(93)
     }
     // MARK: - Table view data source
 
+    func getPromedio(){
+        DatabaseManager.shared.getCalificaciones{ (calificaciones) in
+           
+            for c in calificaciones{
+                if(self.listaCalifs.contains(c.id)){
+                    self.calificacionesBD.append(c)
+                }
+            }
+            
+            self.tableView.reloadData()
+        }
+
+    }
+    
     func getInfo(){
         DatabaseManager.shared.getMaterias{(materias) in
             for m in materias{
@@ -90,17 +111,17 @@ class CalificacionesViewController: UIViewController, UITableViewDelegate, UITab
         return String(gradoA) + " de " + nivelA
     }
     
-    func buildMaestra() -> String{
-        return "Maestra: " + "Alicia Martinez"
-    }
-
-    /*
+    
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let indice = tableView.indexPathForSelectedRow!
+        let vistaCalifs = segue.destination as! TVCCalificacionesUser
+        
+        vistaCalifs.idMateria = materiasDeAlumno[indice.row].id
+        vistaCalifs.nombreMateria = materiasDeAlumno[indice.row].nombreMateria
+        vistaCalifs.califsAlumno = listaCalifs
     }
-    */
+    
 
 }

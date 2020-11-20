@@ -32,12 +32,16 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
         self.navigationController!.isNavigationBarHidden = false;
         tableView.delegate = self
         tableView.dataSource = self
-       getInfo()
+        getInfo()
+        
+        
         // Do any additional setup after loading the view.
     }
 //    override func viewDidDisappear(_ animated: Bool) {
 //        self.navigationController!.isNavigationBarHidden = false;
 //    }
+
+    
     func getInfo(){
         DatabaseManager.shared.getAlumnos{ (alumnos) in
             self.listaAlumnos = alumnos
@@ -85,7 +89,7 @@ class IntroCalificacionesViewController: UIViewController, UITableViewDataSource
             vistaDetalle.gradoA = String (listaAlumnos[indexPath.row].grado)
             vistaDetalle.nivelA = listaAlumnos[indexPath.row].nivel
 
-            
+            vistaDetalle.listaCalifs = listaAlumnos[indexPath.row].calificaciones
             vistaDetalle.listaMaterias = listaAlumnos[indexPath.row].materias
             
         }
