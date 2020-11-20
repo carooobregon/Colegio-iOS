@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         styleHelper.roundBordersButton(btn: loginBtn)
         styleHelper.roundBordersButton(btn: forgotBtn)
 
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
         //DatabaseManager.shared.getAlumnos()
         //DatabaseManager.shared.deleteUser(id: "cXcPjoVbcb2rrJWXvLVM")
         //DatabaseManager.shared.editUser(id: "dDG9eowRcs7KSNP3GaRh", fName: "gabriela")

@@ -67,6 +67,9 @@
 		0FCA74222560C62A0018250B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCA74212560C62A0018250B /* ForgotPasswordViewController.swift */; };
 		0FE28B9C25548BFA006DF48E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0FE28B9F25548CAC006DF48E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C237174725671FA00061C4D2 /* EstadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C237174625671FA00061C4D2 /* EstadosViewController.swift */; };
+		C26C1EA7256745DD003EC642 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C1EA6256745DD003EC642 /* CalendarViewController.swift */; };
+		C26C1EAA256748A2003EC642 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C1EA9256748A2003EC642 /* Evento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,7 +130,10 @@
 		11FEB83C2347B74450398B3A /* Pods_c_bilingua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_c_bilingua.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD6286ECADB1CBEFBB6B997 /* Pods-c-bilingua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c-bilingua.release.xcconfig"; path = "Target Support Files/Pods-c-bilingua/Pods-c-bilingua.release.xcconfig"; sourceTree = "<group>"; };
 		A65D78D39C3FF466440177B7 /* Pods-c-bilingua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c-bilingua.debug.xcconfig"; path = "Target Support Files/Pods-c-bilingua/Pods-c-bilingua.debug.xcconfig"; sourceTree = "<group>"; };
+		C237174625671FA00061C4D2 /* EstadosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadosViewController.swift; sourceTree = "<group>"; };
 		C259EEFE255483660003466B /* EstadoCuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoCuentaViewController.swift; sourceTree = "<group>"; };
+		C26C1EA6256745DD003EC642 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C26C1EA9256748A2003EC642 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,9 +228,12 @@
 				0B71570B2553A95C00D88231 /* Views */,
 				0F1A803E25524EC500CE25C3 /* SceneDelegate.swift */,
 				0F230D7525526D340069F77F /* Main.storyboard */,
+				C26C1EA9256748A2003EC642 /* Evento.swift */,
+				C26C1EA6256745DD003EC642 /* CalendarViewController.swift */,
 				0FCA74212560C62A0018250B /* ForgotPasswordViewController.swift */,
 				0FAFBD972560EA7700C16209 /* CustomButton.swift */,
 				C259EEFE255483660003466B /* EstadoCuentaViewController.swift */,
+				C237174625671FA00061C4D2 /* EstadosViewController.swift */,
 				0F9C9D652554749D0073CAA2 /* AvisoCompletoViewController.swift */,
 				0F9C9D6325546EE30073CAA2 /* Aviso.swift */,
 				0F9C9D6125546CE30073CAA2 /* AvisosViewController.swift */,
@@ -413,12 +422,14 @@
 				0B7157052553A7B100D88231 /* Alumno.swift in Sources */,
 				0B8C3A5725663E0C00880BDC /* TVCGetMaterias.swift in Sources */,
 				0B2DFA412560D63B0092466C /* TableViewAlumnosDeUser.swift in Sources */,
+				C237174725671FA00061C4D2 /* EstadosViewController.swift in Sources */,
 				0B7157102553A99D00D88231 /* ViewControllerAddUser.swift in Sources */,
 				0FE28B9F25548CAC006DF48E /* (null) in Sources */,
 				0B7CE64C25533058008D20B2 /* CalificacionesViewController.swift in Sources */,
 				0B7CE67025533319008D20B2 /* EstadoDeCuenta.swift in Sources */,
 				0B7CE64825533042008D20B2 /* IntroCalificacionesViewController.swift in Sources */,
 				0F230D8025526DA80069F77F /* (null) in Sources */,
+				C26C1EA7256745DD003EC642 /* CalendarViewController.swift in Sources */,
 				0B8C3A5A25663E2000880BDC /* TVCGetAlumnos.swift in Sources */,
 				0F230D8125526DA80069F77F /* (null) in Sources */,
 				0B8C3A512566382C00880BDC /* VCAddEvento.swift in Sources */,
@@ -436,6 +447,7 @@
 				0FA4D883256657860022C284 /* StyleHelperLib.swift in Sources */,
 				0B28888725674AEB00FD35BE /* TVCCalificacionesdeAlumno.swift in Sources */,
 				0B7157092553A8E800D88231 /* ViewControllerAdmin.swift in Sources */,
+				C26C1EAA256748A2003EC642 /* Evento.swift in Sources */,
 				0F1A803F25524EC500CE25C3 /* SceneDelegate.swift in Sources */,
 				0B7CE66F25533319008D20B2 /* Calificacion.swift in Sources */,
 				0B7CE65325533069008D20B2 /* RoundedImageView.swift in Sources */,
