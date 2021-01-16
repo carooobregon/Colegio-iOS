@@ -22,6 +22,14 @@ class MenuViewController: UIViewController {
     
     let styleHelper = StyleHelperLib()
     
+    @IBAction func logOut(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey : "username")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        btnCalif.shadowLayer.fillColor = UIColor.systemBlue.cgColor
