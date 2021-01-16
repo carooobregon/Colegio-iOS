@@ -2180,6 +2180,16 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ZRv-sY-rcX">
                         <barButtonItem key="backBarButtonItem" title="Regresar" id="qaB-M2-FW7"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="6MD-d0-oP7">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ctr-XR-EOQ">
+                                <rect key="frame" x="16" y="7" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cerrar Sesión"/>
+                                <connections>
+                                    <action selector="logOut:" destination="dBT-tt-Hvh" eventType="touchUpInside" id="6Ic-82-Pql"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnAvisos" destination="hWJ-lz-S4k" id="8v7-Ga-895"/>

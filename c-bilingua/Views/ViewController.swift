@@ -71,7 +71,8 @@ class ViewController: UIViewController {
                 if error == nil {
                     //Print into the console if successfully logged in
                     print("You have successfully logged in")
-                    
+                    print("USERDATA:", user?.user.uid)
+                    UserDefaults.standard.set("US", forKey: "username")
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
                     
