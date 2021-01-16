@@ -23,7 +23,6 @@ class MenuViewController: UIViewController {
     let styleHelper = StyleHelperLib()
     
     @IBAction func logOut(_ sender: Any) {
-        print("LOG OUT")
         UserDefaults.standard.removeObject(forKey : "username")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
