@@ -2056,9 +2056,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQr-32-TUR" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQr-32-TUR" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
                                 <rect key="frame" x="24" y="153" width="156" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="B1Y-kM-IMh"/>
+                                    <constraint firstAttribute="width" constant="156" id="OvZ-ZK-Q4f"/>
+                                </constraints>
                                 <inset key="contentEdgeInsets" minX="9" minY="30" maxX="0.0" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -2074,9 +2077,8 @@
                                     <segue destination="LYW-wn-20C" kind="show" id="srT-cZ-Xme"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWJ-lz-S4k" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
-                                <rect key="frame" x="195" y="344" width="164" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWJ-lz-S4k" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
+                                <rect key="frame" x="195" y="344" width="170" height="221"/>
                                 <inset key="contentEdgeInsets" minX="11" minY="28" maxX="0.0" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -2092,9 +2094,11 @@
                                     <segue destination="9it-up-cIr" kind="show" id="UL2-l3-veV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsr-2a-yYZ" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsr-2a-yYZ" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
                                 <rect key="frame" x="195" y="153" width="170" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="k8W-8e-eug"/>
+                                </constraints>
                                 <inset key="contentEdgeInsets" minX="11" minY="30" maxX="0.0" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -2112,9 +2116,8 @@
                                     <segue destination="3Du-PD-hs3" kind="show" id="8gi-5H-H7N"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uq-Xp-oE7" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
-                                <rect key="frame" x="24" y="391" width="156" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uq-Xp-oE7" customClass="CustomButton" customModule="c_bilingua" customModuleProvider="target">
+                                <rect key="frame" x="24" y="391" width="156" height="177"/>
                                 <inset key="contentEdgeInsets" minX="9" minY="19" maxX="0.0" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
@@ -2123,10 +2126,12 @@
                                     <segue destination="UrS-fu-6Cp" kind="show" identifier="showEstado" id="ONr-oi-Afu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-zU-Qwe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-zU-Qwe">
                                 <rect key="frame" x="24" y="582" width="327" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="9r4-2r-BnO"/>
+                                </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Información y Contacto">
@@ -2141,21 +2146,33 @@
                                     <segue destination="UNW-cj-OQx" kind="presentation" id="QAo-sO-CF2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-t6-Jhx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-t6-Jhx">
                                 <rect key="frame" x="255" y="449" width="100" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="1Bu-zs-jbr"/>
+                                    <constraint firstAttribute="width" constant="100" id="TzX-st-ydQ"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJM-UT-GvF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="SJM-UT-GvF">
                                 <rect key="frame" x="71" y="449" width="100" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="JHo-ed-Iyy"/>
+                                    <constraint firstAttribute="width" constant="100" id="JTB-eQ-JPe"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldF-G3-7vq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ldF-G3-7vq">
                                 <rect key="frame" x="71" y="261" width="100" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="t6r-HJ-3bz"/>
+                                    <constraint firstAttribute="width" constant="100" id="u0s-aC-Tcy"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UeQ-bA-Axq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="UeQ-bA-Axq">
                                 <rect key="frame" x="255" y="222" width="100" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="YOF-8L-QfI"/>
+                                    <constraint firstAttribute="height" constant="93" id="gXv-SC-9dX"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f7s-dv-yJm">
                                 <rect key="frame" x="0.0" y="58" width="375" height="100"/>
@@ -2163,7 +2180,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEn-tj-LdV">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="  Menú">
+                                            <fragment content="   Menú">
                                                 <attributes>
                                                     <color key="NSColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <font key="NSFont" size="38" name="Gilroy-Bold"/>
@@ -2185,9 +2202,38 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="4Bd-RN-Y3X" firstAttribute="trailing" secondItem="NTq-t6-Jhx" secondAttribute="trailing" constant="20" id="0Fh-X7-Fs7"/>
+                            <constraint firstItem="zQr-32-TUR" firstAttribute="baseline" secondItem="xsr-2a-yYZ" secondAttribute="baseline" id="4NB-Vh-ydJ"/>
+                            <constraint firstItem="hWJ-lz-S4k" firstAttribute="top" secondItem="xsr-2a-yYZ" secondAttribute="bottom" constant="17" id="6gI-xQ-a3e"/>
                             <constraint firstItem="f7s-dv-yJm" firstAttribute="top" secondItem="4Bd-RN-Y3X" secondAttribute="top" constant="14" id="7hg-Ve-dUn"/>
+                            <constraint firstItem="GXY-zU-Qwe" firstAttribute="top" secondItem="NTq-t6-Jhx" secondAttribute="bottom" constant="40" id="7if-3l-hSw"/>
+                            <constraint firstItem="GXY-zU-Qwe" firstAttribute="centerX" secondItem="f7s-dv-yJm" secondAttribute="centerX" id="7qq-ET-g99"/>
                             <constraint firstItem="f7s-dv-yJm" firstAttribute="leading" secondItem="4Bd-RN-Y3X" secondAttribute="leading" id="Ddh-Di-7mQ"/>
+                            <constraint firstItem="4Bd-RN-Y3X" firstAttribute="trailing" secondItem="UeQ-bA-Axq" secondAttribute="trailing" constant="20" id="Ewm-LM-DnH"/>
+                            <constraint firstItem="zQr-32-TUR" firstAttribute="leading" secondItem="4Bd-RN-Y3X" secondAttribute="leading" constant="24" id="LY3-8i-gQm"/>
+                            <constraint firstItem="hWJ-lz-S4k" firstAttribute="leading" secondItem="SJM-UT-GvF" secondAttribute="trailing" constant="24" id="Rvg-wG-PO9"/>
+                            <constraint firstItem="hWJ-lz-S4k" firstAttribute="leading" secondItem="SJM-UT-GvF" secondAttribute="trailing" constant="24" id="TtJ-Pu-f4x"/>
+                            <constraint firstItem="GXY-zU-Qwe" firstAttribute="top" secondItem="0uq-Xp-oE7" secondAttribute="bottom" constant="14" id="Uaq-nI-yAq"/>
+                            <constraint firstItem="0uq-Xp-oE7" firstAttribute="trailing" secondItem="zQr-32-TUR" secondAttribute="trailing" id="Uu5-tl-oWa"/>
+                            <constraint firstItem="zQr-32-TUR" firstAttribute="top" secondItem="4Bd-RN-Y3X" secondAttribute="top" constant="109" id="Vb9-UU-UoO"/>
+                            <constraint firstItem="hWJ-lz-S4k" firstAttribute="leading" secondItem="zQr-32-TUR" secondAttribute="trailing" constant="15" id="VcW-Gl-tdn"/>
+                            <constraint firstItem="hWJ-lz-S4k" firstAttribute="leading" secondItem="ldF-G3-7vq" secondAttribute="trailing" constant="24" id="W4x-Ir-91e"/>
                             <constraint firstItem="f7s-dv-yJm" firstAttribute="trailing" secondItem="4Bd-RN-Y3X" secondAttribute="trailing" id="Wzz-hu-61l"/>
+                            <constraint firstItem="xsr-2a-yYZ" firstAttribute="baseline" secondItem="zQr-32-TUR" secondAttribute="firstBaseline" id="cDR-pf-TO1"/>
+                            <constraint firstItem="GXY-zU-Qwe" firstAttribute="top" secondItem="SJM-UT-GvF" secondAttribute="bottom" constant="40" id="cwr-J1-Hpo"/>
+                            <constraint firstItem="0uq-Xp-oE7" firstAttribute="top" secondItem="zQr-32-TUR" secondAttribute="bottom" constant="17" id="dtr-Ty-97i"/>
+                            <constraint firstItem="0uq-Xp-oE7" firstAttribute="leading" secondItem="GXY-zU-Qwe" secondAttribute="leading" id="eue-jh-v76"/>
+                            <constraint firstItem="4Bd-RN-Y3X" firstAttribute="bottom" secondItem="GXY-zU-Qwe" secondAttribute="bottom" constant="20" id="fKH-KH-oMY"/>
+                            <constraint firstItem="4Bd-RN-Y3X" firstAttribute="trailing" secondItem="xsr-2a-yYZ" secondAttribute="trailing" constant="10" id="fYx-B9-AM1"/>
+                            <constraint firstItem="GXY-zU-Qwe" firstAttribute="top" secondItem="SJM-UT-GvF" secondAttribute="bottom" constant="40" id="fl4-8H-Cdh"/>
+                            <constraint firstItem="xsr-2a-yYZ" firstAttribute="leading" secondItem="hWJ-lz-S4k" secondAttribute="leading" id="gCG-Lr-KS9"/>
+                            <constraint firstItem="hWJ-lz-S4k" firstAttribute="leading" secondItem="0uq-Xp-oE7" secondAttribute="trailing" constant="15" id="hRE-2G-1EL"/>
+                            <constraint firstItem="4Bd-RN-Y3X" firstAttribute="trailing" secondItem="hWJ-lz-S4k" secondAttribute="trailing" constant="10" id="jL3-z2-35o"/>
+                            <constraint firstItem="hWJ-lz-S4k" firstAttribute="leading" secondItem="zQr-32-TUR" secondAttribute="trailing" constant="15" id="jMM-sj-10V"/>
+                            <constraint firstItem="0uq-Xp-oE7" firstAttribute="top" secondItem="ldF-G3-7vq" secondAttribute="bottom" constant="37" id="kYj-mk-5Kj"/>
+                            <constraint firstItem="GXY-zU-Qwe" firstAttribute="top" secondItem="hWJ-lz-S4k" secondAttribute="bottom" constant="17" id="p1Q-UY-qre"/>
+                            <constraint firstItem="hWJ-lz-S4k" firstAttribute="top" secondItem="UeQ-bA-Axq" secondAttribute="bottom" constant="29" id="ugb-Pu-EBg"/>
+                            <constraint firstItem="zQr-32-TUR" firstAttribute="leading" secondItem="GXY-zU-Qwe" secondAttribute="leading" id="xir-kA-i50"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Bd-RN-Y3X"/>
                     </view>
@@ -2902,5 +2948,6 @@ Cg
         <image name="biglgoo" width="420" height="500"/>
         <image name="bluemegaphone" width="512" height="512"/>
         <image name="girlpng" width="1274" height="1340"/>
+        <image name="white_calendar" width="512" height="512"/>
     </resources>
 </document>
